@@ -293,7 +293,7 @@ document.getElementById("f").addEventListener("submit", e => {
   if (fz.length) return showChoices(fz, `「${q}」와 같은 이름은 없어요. 혹시 이 중에 있나요?`, q);
   showNotFound(q);
 });
-["스키피","올림포스","노브랜드","한살림","오넛티"].forEach(w => {
+["스키피","올림포스","노브랜드","오넛티"].forEach(w => {
   const b = document.createElement("button"); b.type="button"; b.className="chip"; b.textContent=w;
   b.onclick = () => { $q.value = w; $s.hidden = true; const f = document.getElementById("f"); f.requestSubmit ? f.requestSubmit() : f.dispatchEvent(new Event("submit",{cancelable:true})); };
   document.getElementById("ex").appendChild(b);

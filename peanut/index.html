@@ -66,6 +66,10 @@ label.q{font-weight:800;font-size:14px}
 .tag{font:400 12px var(--display);padding:2px 7px;border-radius:5px;white-space:nowrap}
 .tag.s{background:var(--lime);color:var(--ink)} .tag.a{background:var(--lime-soft);color:var(--ink)} .tag.p{background:transparent;color:var(--lime);border:1px solid var(--olive)} .tag.h{background:var(--surface);color:var(--gray);border:1px solid var(--line)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;color:var(--muted)}
+/* 예시 버튼: 라벨은 윗줄, 버튼 5개는 폰 폭에 맞춰 한 줄 */
+#ex{gap:8px 5px}
+#ex .exl{flex-basis:100%}
+#ex .chip{flex:1 1 0;min-width:0;white-space:nowrap;padding-inline:0;text-align:center;font-size:clamp(12px,3.6vw,14px)}
 .chip{background:transparent;color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:6px 11px;font:500 13px var(--body);cursor:pointer}
 
 .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 18px;display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden}
@@ -165,7 +169,7 @@ footer p{text-wrap:balance}
       <button id="go" type="submit">확인</button>
     </div>
     <ul id="sugg" class="sugg" role="listbox" hidden></ul>
-    <div class="chips" id="ex"><span>눌러서 넣어보기</span></div>
+    <div class="chips" id="ex"><span class="exl">눌러서 넣어보기</span></div>
   </form>
 
   <section id="out" aria-live="polite"></section>
@@ -293,7 +297,7 @@ document.getElementById("f").addEventListener("submit", e => {
   if (fz.length) return showChoices(fz, `「${q}」와 같은 이름은 없어요. 혹시 이 중에 있나요?`, q);
   showNotFound(q);
 });
-["스키피","올림포스","노브랜드","오넛티"].forEach(w => {
+["스키피","올림포스","노브랜드","한살림","오넛티"].forEach(w => {
   const b = document.createElement("button"); b.type="button"; b.className="chip"; b.textContent=w;
   b.onclick = () => { $q.value = w; $s.hidden = true; const f = document.getElementById("f"); f.requestSubmit ? f.requestSubmit() : f.dispatchEvent(new Event("submit",{cancelable:true})); };
   document.getElementById("ex").appendChild(b);

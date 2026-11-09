@@ -128,6 +128,21 @@ footer p{margin:0}
 @keyframes pop{0%{transform:scale(.6) rotate(-12deg);opacity:0}70%{transform:scale(1.08) rotate(-2deg);opacity:1}100%{transform:scale(1) rotate(-3deg)}}
 .stamp.pass.anim{animation:pop .45s cubic-bezier(.2,.9,.3,1.3) both}
 @media (prefers-reduced-motion:reduce){.stamp.pass.anim{animation:none}}
+
+/* ── 폰 화면 보정 ── 한 글자만 다음 줄로 떨어지지 않게, 단어 중간에서 끊기지 않게 */
+body{word-break:keep-all;overflow-wrap:anywhere;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+h1,h2,.verdict-line,.note,.lede,.btn,.prod h2{text-wrap:balance}
+.wrap{padding-bottom:env(safe-area-inset-bottom)}
+footer p{text-wrap:balance}
+@media (max-width:374px){
+  footer{font-size:11px}
+  .btn.notion{font-size:15px}
+  .btn.combo .big{font-size:21px}
+  .trio .btn{font-size:12.5px}
+  .prod{grid-template-columns:96px 1fr;gap:12px}
+  .prod .ph{width:96px;height:118px}
+  .prod h2{font-size:16px}
+}
 </style>
 
 </head><body>

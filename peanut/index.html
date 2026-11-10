@@ -74,9 +74,10 @@ label.q{font-weight:700;font-size:13px;color:var(--muted)}
 .chip:hover{border-color:var(--cream)}
 
 /* 등급 기준 = 작은 표 */
-.legend{margin:0;display:grid;grid-template-columns:44px 1fr auto;border-top:1px solid var(--rule-d)}
+.legend{margin:0;display:grid;grid-template-columns:72px 1fr auto;border-top:1px solid var(--rule-d)}
 .legend>*{padding:11px 0;border-bottom:1px solid var(--rule-d);align-self:stretch;display:flex;align-items:center}
 .legend dt{font:800 22px/1 var(--serif)}
+.legend dt small{font:700 14px var(--sans);margin-left:2px}
 .legend dt.s{color:var(--lime)} .legend dt.a{color:var(--lime-soft)} .legend dt.x{color:var(--gray);font-size:15px}
 .legend dd{margin:0;font-size:14px}
 .legend dd.n{justify-content:flex-end;color:var(--muted);font-variant-numeric:tabular-nums;font-size:13px;padding-left:12px}
@@ -175,8 +176,8 @@ footer p{margin:0;text-wrap:balance}
   <section id="out" aria-live="polite"></section>
 
   <dl class="legend" aria-label="등급 기준">
-    <dt class="s">S</dt><dd>유기농 땅콩 100%</dd><dd class="n">5개</dd>
-    <dt class="a">A</dt><dd>국산 땅콩 100%</dd><dd class="n">16개</dd>
+    <dt class="s">S<small>등급</small></dt><dd>유기농 땅콩 100%</dd><dd class="n">5개</dd>
+    <dt class="a">A<small>등급</small></dt><dd>국산 땅콩 100%</dd><dd class="n">16개</dd>
     <dt class="x">탈락</dt><dd class="x">설탕·팜유·식물성유지 등이 더 들어갔거나, 수입 일반 땅콩</dd><dd class="n"></dd>
   </dl>
 

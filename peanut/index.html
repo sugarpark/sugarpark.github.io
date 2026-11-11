@@ -135,7 +135,7 @@ label.q{font-weight:700;font-size:13px;color:var(--muted)}
 .trio{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .trio .btn{flex-direction:row;gap:8px;font:600 14px var(--sans);padding:13px 6px;background:var(--night-2);color:var(--cream);border:1px solid var(--rule-d);width:100%;white-space:nowrap}
 .trio .btn svg{width:18px;height:18px;flex:none}
-.disc{font-size:11px;color:var(--muted);margin:2px 0 0;text-align:center;text-wrap:balance}
+.disc{display:block;font:500 11px/1.5 var(--sans);color:rgba(26,25,28,.62);margin-top:-4px;text-wrap:pretty}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .btn.sub{width:100%;padding:13px 8px;background:var(--night-2);color:var(--cream);border:1px solid var(--rule-d);white-space:nowrap}
 .btn.share .kk{display:inline-block;width:10px;height:10px;border-radius:50%;background:#FEE500;margin-right:6px;vertical-align:0}
@@ -359,13 +359,13 @@ function actionsHTML(swap){
       <span class="big">${swap ? "이걸로 바꿔보세요" : "이것도 먹어보세요"}</span>
       <span class="pick"><span class="gb">S</span><span class="sn" id="buyName"></span></span>
       <small>박슈가 추천 땅버 구매하기</small>
+      <span class="disc" id="disc" hidden>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</span>
     </a>
     <a class="btn notion" href="${NOTION_URL}" target="_blank" rel="noopener">땅콩버터 전수조사 결과보기<small>222개 전체 순위·원재료</small></a>
     <div class="trio">
       <button type="button" class="btn" id="again">${ICON.again}다시 테스트</button>
       <a class="btn" id="req" href="${FORM_URL}" target="_blank" rel="noopener">${ICON.ask}조사 요청하기</a>
     </div>
-    <p class="disc" id="disc" hidden>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
   </div>`;
 }
 function rollBuy(){

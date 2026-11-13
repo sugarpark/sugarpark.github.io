@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="시중 플레인 그릭요거트 126개 뒷면을 전부 읽고 고른 63개. 지금 먹는 제품 이름을 넣어보세요 · 슈가네 성분백서 @sugar__picks">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="슈가네 성분백서">
+<meta property="og:title" content="내가 먹는 그릭요거트, TOP 63에 있을까?">
+<meta property="og:description" content="시중 플레인 그릭요거트 126개 뒷면을 전부 읽고 고른 63개. 지금 먹는 제품 이름을 넣어보세요 · 슈가네 성분백서 @sugar__picks">
+<meta property="og:url" content="https://sugarpark.github.io/greek/">
+<meta property="og:image" content="https://sugarpark.github.io/greek/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1A191C">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥛</text></svg>">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XB76TRFE51"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XB76TRFE51');</script>
+<title>내 그릭요거트 찾기</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@700;800&family=Gothic+A1:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.3/confetti.browser.min.js"></script>
+<style>
+/* 디자인: 릴스 커버 톤(어두운 바탕 + 라임 박스)으로 들어와서, 결과는 「병 뒷면 한글표시사항」 종이 라벨로 나온다.
+   기억에 남는 한 가지 = 크림색 라벨 종이 위에 찍히는 판정 도장. 나머지는 조용하게. */
+:root{
+  --night:#1A191C; --night-2:#232226; --rule-d:#38373C;
+  --paper:#FBFAF7; --paper-2:#F1EFE8; --rule:#2A2A2E; --hair:#D9D6CE;
+  --ink:#2A2A2E; --ink-2:#6B6862; --cream:#FBFAF7; --muted:#9C9992;
+  --lime:#EBF745; --lime-soft:#F6FBC0; --olive:#6E7A0A; --gray:#C4C0BA; --red:#D7261E;
+  --serif:"Hahmlet","Noto Serif KR",serif;
+  --sans:"Pretendard Variable","Pretendard","Gothic A1","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{background:var(--night)}
+body{margin:0;color:var(--cream);font:400 15px/1.6 var(--sans);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere;
+  -webkit-text-size-adjust:100%;text-size-adjust:100%;
+  padding:max(18px,env(safe-area-inset-top,0px)) max(18px,env(safe-area-inset-right,0px)) 40px max(18px,env(safe-area-inset-left,0px))}
+.wrap{max-width:440px;margin:0 auto;display:flex;flex-direction:column;gap:28px;padding-bottom:env(safe-area-inset-bottom)}
+a{color:inherit}
+
+/* 머리 */
+.top{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;color:var(--muted)}
+.top b{color:var(--cream);font-weight:700;letter-spacing:.01em}
+.hero{display:flex;flex-direction:column;gap:14px}
+.kicker{margin:0;font-size:14px;color:var(--muted)}
+.kicker b{color:var(--cream);font-weight:700}
+h1{font:800 clamp(34px,10.4vw,46px)/1.16 var(--serif);margin:0;letter-spacing:-.02em;text-wrap:balance}
+h1 .box{display:inline-block;background:var(--lime);color:var(--night);padding:.02em .16em .06em;margin-top:.1em}
+.lead{margin:0;color:#CFCCC5;font-size:15px;text-wrap:pretty}
+
+/* 검색 */
+form{display:flex;flex-direction:column;gap:10px}
+label.q{font-weight:700;font-size:13px;color:var(--muted)}
+.field{display:flex;align-items:stretch;background:var(--paper);border-radius:14px;padding:5px;box-shadow:0 0 0 0 var(--lime);transition:box-shadow .15s}
+.field:focus-within{box-shadow:0 0 0 3px var(--lime)}
+#q{flex:1;min-width:0;font:600 18px var(--sans);color:var(--ink);background:transparent;border:0;padding:12px 12px;outline:none}
+#q::placeholder{color:#A19E97;font-weight:400}
+#go{font:800 17px var(--sans);background:var(--night);color:var(--lime);border:0;border-radius:10px;padding:0 22px;cursor:pointer}
+#go:active{transform:translateY(1px)}
+:is(#go,.btn,.chip,.opt,.link,.field a):focus-visible{outline:3px solid var(--lime);outline-offset:2px}
+.sugg{list-style:none;margin:0;padding:6px;background:var(--paper);color:var(--ink);border-radius:14px;display:flex;flex-direction:column}
+.sugg li+li{border-top:1px solid var(--hair)}
+.opt{display:block;width:100%;text-align:left;background:none;border:0;color:inherit;font:600 15px/1.4 var(--sans);padding:12px 10px;border-radius:8px;cursor:pointer}
+.opt:hover,.opt.on{background:var(--lime-soft)}
+.opt small{color:var(--ink-2);font-weight:400;font-size:13px;margin-left:4px;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;align-items:center;gap:8px 6px;font-size:12px;color:var(--muted)}
+#ex .exl{flex-basis:100%}
+#ex .chip{flex:1 1 0;min-width:0;white-space:nowrap;padding-inline:0;text-align:center;font-size:clamp(12px,3.6vw,14px)}
+.chip{background:transparent;color:var(--cream);border:1px solid var(--rule-d);border-radius:999px;padding:7px 11px;font:500 13px var(--sans);cursor:pointer}
+.chip:hover{border-color:var(--cream)}
+
+/* 등급 기준 = 작은 표 */
+.legend{margin:0;display:grid;grid-template-columns:72px 1fr auto;border-top:1px solid var(--rule-d)}
+.legend>*{padding:11px 0;border-bottom:1px solid var(--rule-d);align-self:stretch;display:flex;align-items:center}
+.legend dt{font:800 22px/1 var(--serif)}
+.legend dt small{font:700 14px var(--sans);margin-left:2px}
+.legend dt.s{color:var(--lime)} .legend dt.a{color:var(--lime-soft)} .legend dt.x{color:var(--gray);font-size:15px}
+.legend dd{margin:0;font-size:14px}
+.legend dd.n{justify-content:flex-end;color:var(--muted);font-variant-numeric:tabular-nums;font-size:13px;padding-left:12px}
+.legend dd.x{color:var(--muted)}
+
+/* 결과 = 병 뒷면 라벨 종이 */
+#out:empty{display:none}
+#out{display:flex;flex-direction:column;gap:14px;scroll-margin-top:12px}
+.card{background:var(--paper);color:var(--ink);border-radius:6px;padding:22px 18px 20px;display:flex;flex-direction:column;gap:18px;position:relative}
+.verdict{display:flex;align-items:center;gap:14px}
+.stamp{flex:none;font:800 30px/1 var(--serif);padding:12px 14px 13px;border:3px solid var(--ink);border-radius:8px}
+.stamp.pass{background:var(--lime);color:var(--ink);transform:rotate(-4deg)}
+.stamp.ok{background:transparent;color:var(--olive);border-color:var(--olive);font-size:24px}
+.stamp.hold{background:var(--gray);color:var(--ink);font-size:26px}
+.rank{display:flex;flex-direction:column;gap:3px;min-width:0}
+.rank b{font:800 20px/1.25 var(--serif);text-wrap:balance}
+.rank span{color:var(--ink-2);font-size:13px}
+.msg{margin:0;font-size:16px;font-weight:700;line-height:1.45}
+.prod{display:grid;grid-template-columns:104px 1fr;gap:14px;align-items:center}
+.prod .ph{width:104px;height:124px;border-radius:4px;background:var(--paper-2);display:grid;place-items:center;overflow:hidden}
+.prod .ph img{width:100%;height:100%;object-fit:contain;padding:8px;filter:drop-shadow(0 6px 8px rgba(42,42,46,.18))}
+.prod .nm{min-width:0}
+.prod h2{margin:0 0 8px;font-size:18px;line-height:1.35;font-weight:800;text-wrap:balance}
+.types{display:flex;flex-wrap:wrap;gap:5px}
+.types span{font-size:12px;border:1px solid var(--hair);border-radius:4px;padding:1px 7px;color:var(--ink-2)}
+.mine{font-size:12px;color:var(--ink-2);margin-top:6px}
+/* 한글표시사항 칸 */
+.ing{border:2px solid var(--rule);display:grid;grid-template-columns:76px 1fr}
+.ing .lb{background:var(--paper-2);border-right:1px solid var(--rule);padding:10px 10px;font-size:12px;font-weight:700;line-height:1.4;display:flex;align-items:center}
+.ing p{margin:0;padding:10px 12px;font-size:14px;line-height:1.55}
+.ing mark.av{background:none;color:var(--red);font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.extra{display:flex;flex-wrap:wrap;gap:6px}
+.extra span{font-size:13px;background:var(--paper-2);color:var(--ink-2);border-radius:4px;padding:3px 9px}
+.extra span.av{color:var(--red);font-weight:800;background:#FBE9E7}
+.verdict-line{margin:0;font-size:15px;font-weight:700}
+.verdict-line .red{color:var(--red)}
+.note{margin:0;font-size:14px;color:var(--ink-2);text-wrap:pretty}
+.note b{color:var(--ink)}
+.msg.big{font:800 22px/1.3 var(--serif);color:var(--ink)}
+.msg.big::before{content:"";display:inline-block;width:.55em;height:.55em;background:var(--lime);border:2px solid var(--ink);border-radius:50%;margin-right:.35em;vertical-align:.02em}
+.link{background:none;border:0;color:var(--ink-2);text-decoration:underline;font:500 13px var(--sans);cursor:pointer;align-self:center;padding:6px}
+.card .sugg{background:transparent;padding:0}
+
+/* 버튼 */
+.actions{display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;text-align:center;border-radius:12px;padding:14px;font:700 16px var(--sans);cursor:pointer}
+.btn small{font:500 12px var(--sans);opacity:.7}
+.btn.combo{background:var(--lime);color:var(--night);align-items:stretch;text-align:left;gap:12px;padding:18px 18px 16px}
+.btn.combo .big{font:800 23px/1.2 var(--serif)}
+.btn.combo .pick{display:flex;align-items:center;gap:10px;border-top:1.5px solid rgba(26,25,28,.85);padding-top:12px}
+.btn.combo .gb{flex:none;width:30px;height:30px;border-radius:50%;background:var(--night);color:var(--lime);display:grid;place-items:center;font:800 15px var(--serif)}
+.btn.combo .sn{font:700 15px/1.35 var(--sans)}
+.btn.combo small{font:700 13px var(--sans);opacity:1;text-decoration:underline;text-underline-offset:3px}
+.btn.notion{background:transparent;color:var(--cream);border:1.5px solid var(--cream)}
+.trio{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.trio .btn{flex-direction:row;gap:8px;font:600 14px var(--sans);padding:13px 6px;background:var(--night-2);color:var(--cream);border:1px solid var(--rule-d);width:100%;white-space:nowrap}
+.trio .btn svg{width:18px;height:18px;flex:none}
+.disc{display:block;font:500 11px/1.5 var(--sans);color:rgba(26,25,28,.62);margin-top:-4px;text-wrap:pretty}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn.sub{width:100%;padding:13px 8px;background:var(--night-2);color:var(--cream);border:1px solid var(--rule-d);white-space:nowrap}
+.btn.share .kk{display:inline-block;width:10px;height:10px;border-radius:50%;background:#FEE500;margin-right:6px;vertical-align:0}
+.toast{margin:0;text-align:center;font-size:13px;color:var(--lime)}
+footer{font-size:12px;line-height:1.8;color:#7E7B75;border-top:1px solid var(--rule-d);padding-top:18px;text-align:center}
+footer p{margin:0;text-wrap:balance}
+
+@keyframes stamp{0%{transform:scale(1.9) rotate(-14deg);opacity:0}60%{transform:scale(.94) rotate(-3deg);opacity:1}100%{transform:scale(1) rotate(-4deg)}}
+.stamp.pass.anim{animation:stamp .42s cubic-bezier(.3,1.4,.5,1) both}
+@media (prefers-reduced-motion:reduce){.stamp.pass.anim{animation:none}}
+@media (max-width:374px){
+  .prod{grid-template-columns:88px 1fr}.prod .ph{width:88px;height:108px}
+  .prod h2{font-size:16px}.stamp{font-size:26px}.btn.combo .big{font-size:20px}
+  .ing{grid-template-columns:64px 1fr}.trio .btn{font-size:13px}
+}
+/* ── 그릭 편에서 더한 것: 판단 보류(주황) 표시 · 목초·유기농 표시 · 등급표 보조줄 ── */
+:root{--orange:#C9600F}
+.ing mark.hv{background:none;color:var(--orange);font-weight:800;text-decoration:underline dotted;text-decoration-thickness:2px;text-underline-offset:3px}
+.extra span.hv{color:var(--orange);font-weight:800;background:#FDEEDF}
+.verdict-line .org{color:var(--orange)}
+.types span.tier{background:var(--lime-soft);color:var(--ink);border-color:var(--olive);font-weight:700}
+.legend dd small{display:block;color:var(--muted);font-size:12px;line-height:1.45;margin-top:2px}
+.legend dd.d{flex-direction:column;align-items:flex-start;justify-content:center}
+</style>
+</head><body>
+<div class="wrap">
+  <div class="top"><span>슈가네 성분백서 그릭요거트 편</span><b>@sugar__picks</b></div>
+
+  <section class="hero">
+    <p class="kicker">시중 플레인 그릭요거트 <b>126개</b>, 뒷면을 전부 읽었어요</p>
+    <h1>내가 먹는 그릭요거트<br><span class="box">TOP 63에 있을까?</span></h1>
+    <p class="lead">원유와 유산균만 들어간 60개에, 대체당만 더했거나 저지방인 3개를 더해 골랐어요. 지금 먹고 있는 제품 이름을 넣어보세요.</p>
+  </section>
+
+  <form id="f" autocomplete="off" novalidate>
+    <label class="q" for="q">내 그릭요거트 이름</label>
+    <div class="field">
+      <input id="q" name="q" type="text" inputmode="search" placeholder="예: 매일 바이오, 그릭데이" aria-autocomplete="list" aria-controls="sugg" enterkeyhint="search">
+      <button id="go" type="submit">확인</button>
+    </div>
+    <ul id="sugg" class="sugg" role="listbox" hidden></ul>
+    <div class="chips" id="ex"><span class="exl">눌러서 넣어보기</span></div>
+  </form>
+
+  <section id="out" aria-live="polite"></section>
+
+  <dl class="legend" aria-label="등급 기준">
+    <dt class="s">S<small>등급</small></dt><dd class="d">원유(우유)·유산균만<small>그중 목초·유기농 원유 10개가 1~10위</small></dd><dd class="n">60개</dd>
+    <dt class="a">A<small>등급</small></dt><dd class="d">대체당만 더했거나 저지방</dd><dd class="n">3개</dd>
+    <dt class="x">탈락</dt><dd class="x">탈지유·분유·분말·설탕·첨가물이 들어갔거나 우유가 아닌 베이스</dd><dd class="n"></dd>
+  </dl>
+
+  <div class="actions page-actions">
+    <div class="duo">
+      <button type="button" class="btn sub share"><span><span class="kk" aria-hidden="true"></span>친구에게 공유</span><small>카톡으로 보내기</small></button>
+      <a class="btn sub ig" id="igTop" href="#" target="_blank" rel="noopener">슈가픽 팔로우하기<small>@sugar__picks</small></a>
+    </div>
+    <p class="toast" role="status" hidden></p>
+  </div>
+
+  <footer>
+    <p>이 페이지는 광고가 아니며, 허용 기준 내 제품들 안에서<br>제가 개인적으로 성분만 비교해본 기록입니다.<br>저는 최대한 첨가물이 적고, 대체 가능한 제품을 고릅니다.<br>원재료는 2026년 10~11월 조사일 기준 판매처 표시사항이에요.<br>S등급 안에서는 목초·유기농 원유를 먼저 두고,<br>그다음 100g당 단백질이 많은 순이에요.</p>
+  </footer>
+</div>
+
+<script>
+/* ===== 설정: 여기만 고치면 됩니다 =====
+   BUY: 「이걸로 바꿔보세요」 버튼에 랜덤으로 뜨는 추천 제품(순위 번호).
+        coupang 칸에 쿠팡 파트너스 링크를 넣으면 그걸로 열리고 수수료 문구가 붙어요.
+        비어 있으면 조사 때 확인한 판매처 링크로 열려요(문구 없음).
+        2위 두레생협(조합원 장보기)·8위 우리울타리(단종 추정)는 일부러 뺐어요. */
+const SHARE_URL = "https://sugarpark.github.io/greek/"; /* 공유 버튼이 보내는 주소 */
+/* 집계: 사이트 버전에만 GA4가 붙고, 없으면 아무 일도 안 해요.
+   이벤트 = test_result(결과 본 수·판정·제품) / buy_click(추천 구매 클릭) / share_click / request_click / follow_click / notion_click / retest */
+function track(name, params){ try { if (typeof gtag === "function") gtag("event", name, Object.assign({page:"greek"}, params || {})); } catch(e){} }
+const IG_URL = "https://www.instagram.com/sugar__picks/";
+/* 조사 요청하기 → 구글폼 「슈가네 성분백서 · 조사 요청」(땅콩버터 편과 같은 폼) */
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe0BgyWCIvpz0W0QBhLL3nwuhCxF9sHrlyZTudGola9gWyf5g/viewform";
+const FORM_ENTRY = {what:"entry.9333328", kind:"entry.1078455869"};
+/* 그릭요거트 노션 공유편 주소. 비어 있으면 「전수조사 결과보기」 버튼이 안 보여요 */
+const NOTION_URL = "";
+const BUY = {
+  1:{coupang:[], label:["범산목장 유기농 목초 그릭요구르트"]},
+  3:{coupang:[], label:["제주축산농협 목초먹인 그릭요거트 라이트"]},
+  4:{coupang:[], label:["데미샘목장 유기농 그릭요거트"]},
+  5:{coupang:[], label:["자연주의 유기농 그릭요거트"]},
+  6:{coupang:[], label:["후디스 유기농 그릭요거트 달지 않은 플레인"]},
+  7:{coupang:[], label:["우유창고 유기농 그릭요거트 플레인"]},
+  9:{coupang:[], label:["팜프레쉬 유기농 그릭요거트 플레인"]},
+  10:{coupang:[], label:["유니드마이요거트 유기농 그릭요거트"]}
+};
+/* ===================================== */
+
+const DATA = {"tops":[{"rank":1,"grade":"S","name":"범산목장 유기농 목초 그릭요구르트","tier":"유기농·목초 원유","why":"","sizes":"350ml","links":{"":"https://www.ssg.com/item/itemView.ssg?itemId=1000174274441"},"stores":{"":"이마트몰(SSG)"}},{"rank":2,"grade":"S","name":"두레생협 유기농그릭요거트","tier":"유기농 원유","why":"","sizes":"450ml","links":{"":"https://www.ecoop.or.kr/DureShop/prod/goodsView.do?returnTypeGb=01&returnNo=47287&returnPlanNo=0"},"stores":{"":"두레생협 장보기(생활재번호 47287)"}},{"rank":3,"grade":"S","name":"[제주축산농협] 목초먹인 무항생제 그릭요거트 라이트","tier":"목초 원유","why":"","sizes":"450g","links":{"":"https://www.kurly.com/goods/1002379786"},"stores":{"":"컬리"}},{"rank":4,"grade":"S","name":"데미샘목장 유기농 그릭요거트","tier":"유기농 원유","why":"","sizes":"95g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4714017611"},"stores":{"":"G마켓 월드원스토어"}},{"rank":5,"grade":"S","name":"자연주의 유기농 그릭요거트","tier":"유기농 원유","why":"","sizes":"450g","links":{"":"https://www.ssg.com/item/itemView.ssg?itemId=1000585676917"},"stores":{"":"이마트몰(SSG)"}},{"rank":6,"grade":"S","name":"후디스 유기농 그릭요거트 달지 않은 플레인","tier":"유기농 원유","why":"","sizes":"450g / 80g","links":{"":"https://www.foodismall.com/product/후디스-유기농-그릭요거트-달지않은-플레인-450g-x-1개/3714/category/608/display/1/"},"stores":{"":"일동후디스 공식몰"}},{"rank":7,"grade":"S","name":"우유창고 유기가공식품 인증 그릭요거트 플레인","tier":"유기농 원유","why":"","sizes":"340g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4607592946"},"stores":{"":"G마켓 가성비마켙"}},{"rank":8,"grade":"S","name":"유기농 우리울타리 무가당 그릭 요거트","tier":"유기농 원유","why":"","sizes":"300g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=1634382603"},"stores":{"":"옥션 가성비마켙"}},{"rank":9,"grade":"S","name":"[팜프레쉬] 유기농 그릭(무가당) 요거트 플레인","tier":"유기농 원유","why":"","sizes":"300g","links":{"":"https://www.kurly.com/goods/5068537"},"stores":{"":"컬리"}},{"rank":10,"grade":"S","name":"유니드마이요거트 유기농 그릭요거트(무가당)","tier":"유기농 원유","why":"","sizes":"100g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4781334029"},"stores":{"":"G마켓 리노니노"}},{"rank":11,"grade":"S","name":"식단요정 무가당 꾸덕한 그릭요거트 완꾸덕","tier":"","why":"","sizes":"500g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4692406444"},"stores":{"":"G마켓 식단요정"}},{"rank":12,"grade":"S","name":"파인드 꾸덕한 수제 플레인 그릭요거트","tier":"","why":"","sizes":"100g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4779352588"},"stores":{"":"G마켓 모아이비"}},{"rank":13,"grade":"S","name":"어니스트그릭 그릭요거트 띠크","tier":"","why":"","sizes":"100g","links":{"":"https://www.kurly.com/goods/5070078"},"stores":{"":"컬리"}},{"rank":14,"grade":"S","name":"슈퍼100 그릭요거트","tier":"","why":"","sizes":"100g","links":{"":"https://m.fredit.co.kr/product/detail?prdId=10014154"},"stores":{"":"hy 프레딧 공식몰"}},{"rank":15,"grade":"S","name":"(까망목장) 수제 그릭요거트 플레인","tier":"","why":"","sizes":"500g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4866957357"},"stores":{"":"G마켓 롯데백화점1관"}},{"rank":16,"grade":"S","name":"오아시스 아침 그릭요거트 클래식","tier":"","why":"","sizes":"100g","links":{"":"https://www.oasis.co.kr/product/detail/129040"},"stores":{"":"오아시스"}},{"rank":17,"grade":"S","name":"셀렉더요그 수제 그릭요거트 오리지널 플레인 무가당","tier":"","why":"","sizes":"500g / 1kg","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4617779915"},"stores":{"":"G마켓 달리푸드몰"}},{"rank":18,"grade":"S","name":"밀크릭 그릭요거트","tier":"","why":"","sizes":"100g","links":{"":"https://m.oasis.co.kr/product/detail/134112"},"stores":{"":"오아시스"}},{"rank":19,"grade":"S","name":"요즘 그릭요거트 플레인","tier":"","why":"","sizes":"100g / 450g / 800g","links":{"":"https://www.yozm.co.kr/product/detail.html?product_no=34"},"stores":{"":"YOZM 공식몰"}},{"rank":20,"grade":"S","name":"룩트 아이슬란딕 요거트 띠크","tier":"","why":"","sizes":"100g / 450g","links":{"":"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=B000000152996"},"stores":{"":"올리브영 입점 룩트"}},{"rank":21,"grade":"S","name":"밀키요 시그니처 그릭요거트","tier":"","why":"","sizes":"100g","links":{},"stores":{"":"컬리"}},{"rank":22,"grade":"S","name":"디어파인 그릭요거트 시그니처","tier":"","why":"","sizes":"100g","links":{"":"https://www.oasis.co.kr/product/detail/129922"},"stores":{"":"오아시스마켓"}},{"rank":23,"grade":"S","name":"그릭데이 그릭요거트 시그니처","tier":"","why":"","sizes":"100g / 450g","links":{"":"https://www.greekday.co.kr/product/detail.html?product_no=419"},"stores":{"":"그릭데이 공식몰"}},{"rank":24,"grade":"S","name":"식단요정 무가당 꾸덕한 그릭요거트 크리미","tier":"","why":"","sizes":"500g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4250145206"},"stores":{"":"G마켓 식단요정"}},{"rank":25,"grade":"S","name":"그릭오 그릭요거트 띠크","tier":"","why":"","sizes":"100g / 450g","links":{"":"https://www.oasis.co.kr/product/detail/129327"},"stores":{"":"오아시스"}},{"rank":26,"grade":"S","name":"서울우유 더진한 그릭요거트","tier":"","why":"","sizes":"100g / 450g","links":{"":"https://www.megamart.com/product/14063664"},"stores":{"":"메가마트몰"}},{"rank":27,"grade":"S","name":"(한스푼 요거트) 찐 그릭요거트 무가당 수제 그릭요거트","tier":"","why":"","sizes":"500g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4796311098"},"stores":{"":"G마켓 신세계몰"}},{"rank":28,"grade":"S","name":"룩트 아이슬란딕 요거트 마일드","tier":"","why":"","sizes":"100g / 450g","links":{"":"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=B000000152996"},"stores":{"":"올리브영 입점 룩트"}},{"rank":29,"grade":"S","name":"노브랜드 그릭요거트","tier":"","why":"","sizes":"100g","links":{},"stores":{"":"11번가 이마트"}},{"rank":30,"grade":"S","name":"푸드앤플랜 리얼 그릭요거트","tier":"","why":"","sizes":"500g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=1705039046"},"stores":{"":"G마켓 바스켓플랜"}},{"rank":31,"grade":"S","name":"hy 메치니코프 그릭 무가당 플레인","tier":"","why":"","sizes":"100g","links":{"":"https://www.insight.co.kr/news/541082"},"stores":{"":"카카오메이커스"}},{"rank":32,"grade":"S","name":"홈플러스시그니처 그릭요거트","tier":"","why":"","sizes":"100g","links":{"":"https://mfront.homeplus.co.kr/item?itemNo=070562380&storeType=HYPER"},"stores":{"":"홈플러스"}},{"rank":33,"grade":"S","name":"[요플] 꾸덕한 무가당 수제 그릭요거트","tier":"","why":"","sizes":"500ml","links":{"":"https://item.gmarket.co.kr/Item?goodscode=2267462354"},"stores":{"":"G마켓 그릭요거트요플"}},{"rank":34,"grade":"S","name":"[요빌] 수제 그릭요거트 플레인","tier":"","why":"","sizes":"200g / 550g / 1kg","links":{"":"https://m.oasis.co.kr/product/detail/58433"},"stores":{"":"오아시스"}},{"rank":35,"grade":"S","name":"어니스트그릭 그릭요거트 플레인 오리지널","tier":"","why":"","sizes":"100g / 350g","links":{"":"https://www.kurly.com/goods/5070057"},"stores":{"":"컬리"}},{"rank":36,"grade":"S","name":"곰곰 온가족 그릭요거트","tier":"","why":"","sizes":"100g / 450g","links":{"":"https://www.coupang.com/vp/products/7330083282"},"stores":{"":"쿠팡"}},{"rank":37,"grade":"S","name":"강훈목장 수제 그릭요거트 마일드","tier":"","why":"","sizes":"100g × 3","links":{"":"https://www.coupang.com/vp/products/8475402227"},"stores":{"":"쿠팡"}},{"rank":38,"grade":"S","name":"아침미소목장 무가당 그릭요거트","tier":"","why":"","sizes":"100g","links":{"":"https://www.coupang.com/vp/products/9094917222"},"stores":{"":"쿠팡"}},{"rank":39,"grade":"S","name":"파예 토탈 올 네츄럴 그릭 요거트(유지방 5%)","tier":"","why":"","sizes":"150g / 450g","links":{"":"https://cheesequeen.co.kr/goods/view?no=5384"},"stores":{"":"치즈퀸"}},{"rank":40,"grade":"S","name":"[제주우유] 저지그릭요거트","tier":"","why":"","sizes":"100g","links":{"":"https://www.kurly.com/goods/1001214599"},"stores":{"":"컬리"}},{"rank":41,"grade":"S","name":"그농 무가당 무설탕 산미적은 그릭 요거트","tier":"","why":"","sizes":"500g","links":{"":"https://www.coupang.com/vp/products/8235028517"},"stores":{"":"쿠팡"}},{"rank":42,"grade":"S","name":"[아프로그릭] 유당제로 시그니처 그릭요거트","tier":"","why":"","sizes":"450g","links":{"":"https://www.kurly.com/goods/1002040658"},"stores":{"":"컬리"}},{"rank":43,"grade":"S","name":"밀크아트 수제요거트 무가당 그릭요거트","tier":"","why":"","sizes":"100g / 500g / 1kg","links":{"":"https://m.oasis.co.kr/product/detail/80859"},"stores":{"":"오아시스"}},{"rank":44,"grade":"S","name":"오아시스 아침 그릭요거트 마일드","tier":"","why":"","sizes":"100g","links":{"":"https://www.oasis.co.kr/product/detail/129041"},"stores":{"":"오아시스"}},{"rank":45,"grade":"S","name":"유얼거트 플레인 그릭요거트","tier":"","why":"","sizes":"130g / 450g","links":{"":"https://www.yourgut.co.kr/product/%EC%9C%A0%EC%96%BC%EA%B1%B0%ED%8A%B8-%EA%B5%AD%EC%82%B0-%EC%9B%90%EC%9C%A0-%EC%A0%80%EB%8B%B9-%ED%94%8C%EB%A0%88%EC%9D%B8-%EA%B7%B8%EB%A6%AD%EC%9A%94%EA%B1%B0%ED%8A%B8-130g-3%EA%B0%9C/11/category/49/display/1/"},"stores":{"":"유얼거트 공식몰"}},{"rank":46,"grade":"S","name":"숲골 꾸덕꾸덕 그릭요거트","tier":"","why":"","sizes":"150g / 1kg","links":{"":"https://m.oasis.co.kr/product/detail/47143"},"stores":{"":"오아시스"}},{"rank":47,"grade":"S","name":"요즘 그릭요거트 소프트","tier":"","why":"","sizes":"100g / 500g","links":{"":"https://www.yozm.co.kr/product/detail.html?product_no=33"},"stores":{"":"YOZM 공식몰"}},{"rank":48,"grade":"S","name":"서울우유 더 진한 그릭요거트 소프트","tier":"","why":"","sizes":"100g / 450g","links":{"":"https://www.11st.co.kr/products/7685346190"},"stores":{"":"11번가 블리츠샵"}},{"rank":49,"grade":"S","name":"오네쉬 수제 무가당 그릭 요거트","tier":"","why":"","sizes":"350g / 500g","links":{"":"https://m.oasis.co.kr/product/detail/48232"},"stores":{"":"오아시스"}},{"rank":50,"grade":"S","name":"헤이필드 그릭요거트 플레인","tier":"","why":"","sizes":"100g","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4800208615"},"stores":{"":"G마켓 헤이필드 공식"}},{"rank":51,"grade":"S","name":"오네쉬 포켓 그릭 요거트","tier":"","why":"","sizes":"100g","links":{"":"https://m.oasis.co.kr/product/detail/48237"},"stores":{"":"오아시스"}},{"rank":52,"grade":"S","name":"곰곰 그릭요거트 소프트","tier":"","why":"","sizes":"100g","links":{"":"https://www.coupang.com/vp/products/8721523525"},"stores":{"":"쿠팡"}},{"rank":53,"grade":"S","name":"그릭데이 그릭요거트 라이트","tier":"","why":"","sizes":"100g / 450g","links":{"":"https://www.greekday.co.kr/product/detail.html?product_no=420"},"stores":{"":"그릭데이 공식몰"}},{"rank":54,"grade":"S","name":"i그릭요거트(무가당)","tier":"","why":"","sizes":"95g","links":{"":"https://icoop.or.kr/coopmall/goodsmall.phtm?act=detail&from=&gc=26090H0500&gc_page=4&gubun=orderby&val=1"},"stores":{"":"자연드림"}},{"rank":55,"grade":"S","name":"피코크 에이클래스 시그니처 그릭요거트","tier":"","why":"","sizes":"450g","links":{},"stores":{"":"11번가 이마트"}},{"rank":56,"grade":"S","name":"후디스 그릭요거트 달지 않은 플레인","tier":"","why":"","sizes":"450g","links":{"":"https://www.foodismall.com/product/후디스-그릭요거트-달지않은-플레인-450g-x-1개/2296/category/608/display/1/"},"stores":{"":"일동후디스 공식몰"}},{"rank":57,"grade":"S","name":"임실치즈마을 짜먹는 그릭요거트 무가당 플레인","tier":"","why":"","sizes":"120g","links":{"":"https://www.oasis.co.kr/product/detail/126732"},"stores":{"":"오아시스"}},{"rank":58,"grade":"S","name":"발효그릭요거트","tier":"","why":"","sizes":"100g","links":{"":"https://www.icoop.or.kr/coopmall/goodsmall.phtm?act=detail&gc=60000DHM00&key=%EB%AC%BC"},"stores":{"":"자연드림"}},{"rank":59,"grade":"S","name":"온드리목장 무가당 꾸덕한 그릭요거트","tier":"","why":"","sizes":"1kg","links":{"":"https://item.gmarket.co.kr/Item?goodscode=4865864650"},"stores":{"":"G마켓 젠이츠"}},{"rank":60,"grade":"S","name":"철원목장 수제 유기농 무가당 그릭요거트","tier":"","why":"","sizes":"130g / 470g","links":{"":"https://m.oasis.co.kr/product/detail/87237"},"stores":{"":"오아시스"}},{"rank":61,"grade":"A","name":"후디스 그릭요거트 달지 않은 저지방","tier":"","why":"저지방","sizes":"450g / 80g","links":{"":"https://www.foodismall.com/product/후디스-그릭요거트-달지않은-저지방-450g-x-1개/456/category/608/display/1/"},"stores":{"":"일동후디스 공식몰"}},{"rank":62,"grade":"A","name":"서울우유 더진한 알룰로스 그릭요거트","tier":"","why":"대체당(알룰로스)","sizes":"100g","links":{"":"https://www.na100shop.com/m/goodsView.do?gidx=40026"},"stores":{"":"서울우유 공식 나100샵"}},{"rank":63,"grade":"A","name":"요즘 그릭요거트 알룰로스 블렌드","tier":"","why":"대체당(알룰로스)","sizes":"100g","links":{"":"https://www.costco.co.kr/Foods/Chilled-Foods/Chilled-Foods/YOZM-Greek-Yogurt-Allulose-100g-x-6/p/685530"},"stores":{"":"컬리([마이노멀 x YOZM] 저당 그릭요거트 알룰로스 블랜드)"}}],"rows":[{"n":"범산목장 유기농 목초 그릭요구르트","s":"350ml","i":"유기농목초원유 99.99%(국산), 유산균(이탈리아산) 0.01% 우유함유","k":"top","r":1,"note":"100mL당 단백질 7.4g · 100mL당 1,994원","alt":[]},{"n":"두레생협 유기농그릭요거트","s":"450ml","i":"원유 99.99%(국산/유기농), 유산균 0.01%(이탈리아산)","k":"top","r":2,"note":"100mL당 단백질 7g · 100mL당 1,533원","alt":[]},{"n":"[제주축산농협] 목초먹인 무항생제 그릭요거트 라이트","s":"450g","i":"1A등급 무항생제원유 99.99%(제주산, 세균수기준), 유산균 0.01%(프랑스)","k":"top","r":3,"note":"100g당 단백질 7g · 100g당 2,311원","alt":["제주목장 목초 그릭요거트 라이트"]},{"n":"데미샘목장 유기농 그릭요거트","s":"95g","i":"원유 99.99%(국산/유기농), 유산균 0.01%(프랑스)","k":"top","r":4,"note":"100g당 단백질 6.3g · 100g당 2,776원","alt":[]},{"n":"자연주의 유기농 그릭요거트","s":"450g","i":"[유기농 함량 99.971%] 유기농 원유(국산) 99.971%(유기농 우유 약 900mL/컵), 유산균(복합유산균으로 1,800억 이상/100g)","k":"top","r":5,"note":"100g당 단백질 6g · 100g당 1,329원","alt":[]},{"n":"후디스 유기농 그릭요거트 달지 않은 플레인","s":"450g / 80g","i":"[유기농 함량99.971%] 유기농 원유(국산)99.971%(유기농 우유 약900mL/컵), 유산균(복합유산균으로1,800억 이상/100g)","k":"top","r":6,"note":"100g당 단백질 6g · 100g당 1,767원","alt":[]},{"n":"우유창고 유기가공식품 인증 그릭요거트 플레인","s":"340g","i":"유기농 원유 99.996%(국내산), 유산균 0.004%(이탈리아산)","k":"top","r":7,"note":"100g당 단백질 6g · 100g당 2,588원","alt":[]},{"n":"유기농 우리울타리 무가당 그릭 요거트","s":"300g","i":"유기농 원유 99.99%(국내산), 유산균 [총 유기농 함량 99.99%]","k":"top","r":8,"note":"100g당 단백질 5.6g(영양 앱 기준) · 100g당 5,243원. 지금은 판매가 끝난 것으로 보여요","alt":[]},{"n":"[팜프레쉬] 유기농 그릭(무가당) 요거트 플레인","s":"300g","i":"유기농우유(국산) 99.9%, 유산균혼합분말(덴마크 50%, 이탈리아 50%)","k":"top","r":9,"note":"100g당 단백질 5g · 100g당 2,967원","alt":[]},{"n":"유니드마이요거트 유기농 그릭요거트(무가당)","s":"100g","i":"유기농우유(국산) 99%, 유산균혼합분말(덴마크 50%, 이탈리아 50%)","k":"top","r":10,"note":"100g당 단백질 5g · 100g당 10,633원","alt":["유니드 마이 요거트 유기농 무가당"]},{"n":"식단요정 무가당 꾸덕한 그릭요거트 완꾸덕","s":"500g","i":"원유 99.95%(국산), 유산균 0.05%(덴마크산)","k":"top","r":11,"note":"100g당 단백질 17g · 100g당 2,580원","alt":["식단요정 요밀 그릭요거트 완꾸덕"]},{"n":"파인드 꾸덕한 수제 플레인 그릭요거트","s":"100g","i":"원유(국내산) 99.95%, 유산균(덴마크산) 0.05%","k":"top","r":12,"note":"100g당 단백질 15.37g · 100g당 7,400원","alt":[]},{"n":"어니스트그릭 그릭요거트 띠크","s":"100g","i":"우유(국산)99.99%, 유산균0.01%","k":"top","r":13,"note":"100g당 단백질 14.11g · 100g당 3,900원","alt":[]},{"n":"슈퍼100 그릭요거트","s":"100g","i":"원유 99.996%(국산), 복합유산균 0.004%","k":"top","r":14,"note":"100g당 단백질 14g · 100g당 3,400원","alt":[]},{"n":"(까망목장) 수제 그릭요거트 플레인","s":"500g","i":"우유(국산) 99.97%, 복합유산균 0.03%(이탈리아산)","k":"top","r":15,"note":"100g당 단백질 14g · 100g당 4,180원","alt":["요하트 그릭요거트 플레인"]},{"n":"오아시스 아침 그릭요거트 클래식","s":"100g","i":"원유 99.996%, 복합유산균 0.04%","k":"top","r":16,"note":"100g당 단백질 13g · 100g당 3,400원","alt":[]},{"n":"셀렉더요그 수제 그릭요거트 오리지널 플레인 무가당","s":"500g / 1kg","i":"1등급 국산원유 99.9%, 유산균 0.1%","k":"top","r":17,"note":"100g당 단백질 12g · 100g당 2,186원(1kg 기준)","alt":[]},{"n":"밀크릭 그릭요거트","s":"100g","i":"원유(세균수 기준 1급A, 국산) 99.99%, 유산균","k":"top","r":18,"note":"100g당 단백질 12g · 100g당 2,800원","alt":["밀크릭 꾸덕 그릭요거트"]},{"n":"요즘 그릭요거트 플레인","s":"100g / 450g / 800g","i":"원유(국산)99.996%, 유산균혼합분말","k":"top","r":19,"note":"100g당 단백질 12g · 100g당 2,875원(800g 기준)","alt":[]},{"n":"룩트 아이슬란딕 요거트 띠크","s":"100g / 450g","i":"원유(세균수 기준1급A, 국산)99.99%, 유산균","k":"top","r":20,"note":"100g당 단백질 12g · 100g당 3,089원(450g 기준)","alt":[]},{"n":"밀키요 시그니처 그릭요거트","s":"100g","i":"원유 99.994%(경북 구미시), 유산균 0.006%","k":"top","r":21,"note":"100g당 단백질 12g · 100g당 3,400원","alt":[]},{"n":"디어파인 그릭요거트 시그니처","s":"100g","i":"원유(1A등급, 국산)99.9%, 복합유산균0.1%","k":"top","r":22,"note":"100g당 단백질 12g · 100g당 3,800원","alt":[]},{"n":"그릭데이 그릭요거트 시그니처","s":"100g / 450g","i":"원유 99.996%(국산), 복합유산균 0.004%","k":"top","r":23,"note":"100g당 단백질 11.42g · 100g당 3,222원","alt":[]},{"n":"식단요정 무가당 꾸덕한 그릭요거트 크리미","s":"500g","i":"원유 99.95%(국산), 유산균 0.05%(덴마크산)","k":"top","r":24,"note":"100g당 단백질 11g · 100g당 2,380원","alt":["식단요정 요밀 그릭요거트 크리미"]},{"n":"그릭오 그릭요거트 띠크","s":"100g / 450g","i":"원유(국산)99.996%, 유산균","k":"top","r":25,"note":"100g당 단백질 11g · 100g당 2,422원","alt":[]},{"n":"서울우유 더진한 그릭요거트","s":"100g / 450g","i":"원유(국산)99.99%, 유산균","k":"top","r":26,"note":"100g당 단백질 11g · 100g당 3,280원","alt":[]},{"n":"(한스푼 요거트) 찐 그릭요거트 무가당 수제 그릭요거트","s":"500g","i":"원유(폴란드, 독일), 유산균(이탈리아)","k":"top","r":27,"note":"100g당 단백질 10.92g · 100g당 3,204원","alt":[]},{"n":"룩트 아이슬란딕 요거트 마일드","s":"100g / 450g","i":"원유(세균수 기준1급A, 국산)99.99%, 유산균","k":"top","r":28,"note":"100g당 단백질 10.6g · 100g당 3,089원(450g 기준)","alt":[]},{"n":"노브랜드 그릭요거트","s":"100g","i":"원유(세균수 기준 1급A, 국산), 유산균","k":"top","r":29,"note":"100g당 단백질 10g · 100g당 2,880원","alt":[]},{"n":"푸드앤플랜 리얼 그릭요거트","s":"500g","i":"우유(국산) 99.9%, 유산균 0.1%, 우유함유","k":"top","r":30,"note":"100g당 단백질 10g · 100g당 2,980원","alt":[]},{"n":"hy 메치니코프 그릭 무가당 플레인","s":"100g","i":"우유(국산), 유산균(덴마크산)","k":"top","r":31,"note":"100g당 단백질 10g · 100g당 3,900원","alt":[]},{"n":"홈플러스시그니처 그릭요거트","s":"100g","i":"우유(국산), 동결건조유산균(덴마크산)","k":"top","r":32,"note":"100g당 단백질 10g. 지금은 판매가 끝난 것으로 보여요. 같은 이름 450g은 배합이 달라 탈락이에요","alt":["플레인 그릭요거트"]},{"n":"[요플] 꾸덕한 무가당 수제 그릭요거트","s":"500ml","i":"국산 우유 99.9% , 유산균 0.1%","k":"top","r":33,"note":"100g당 단백질 9.9g · 100g당 2,580원","alt":[]},{"n":"[요빌] 수제 그릭요거트 플레인","s":"200g / 550g / 1kg","i":"플레인 : 우유 99.9%(국내산), 유산균 0.1%(이탈리아산)","k":"top","r":34,"note":"100g당 단백질 9.3g(영양 앱 기준) · 100g당 2,050원(1kg 기준)","alt":[]},{"n":"어니스트그릭 그릭요거트 플레인 오리지널","s":"100g / 350g","i":"우유(국산) 99.99%, 유산균(덴마크산) 0.01%","k":"top","r":35,"note":"100g당 단백질 9.25g(영양 앱 기준) · 100g당 3,371원(350g 기준)","alt":[]},{"n":"곰곰 온가족 그릭요거트","s":"100g / 450g","i":"원유(세균수 기준 1급A, 국산), 동결건조유산균1, 동결건조유산균2","k":"top","r":36,"note":"100g당 단백질 9g · 100g당 2,336원","alt":[]},{"n":"강훈목장 수제 그릭요거트 마일드","s":"100g × 3","i":"원유(99.994% 국산), 유산균 [우유함유]","k":"top","r":37,"note":"100g당 단백질 9g · 100g당 3,600원","alt":[]},{"n":"아침미소목장 무가당 그릭요거트","s":"100g","i":"원유(제주산) 99.995%, 유산균 [우유함유]","k":"top","r":38,"note":"100g당 단백질 9g · 100g당 3,900원","alt":[]},{"n":"파예 토탈 올 네츄럴 그릭 요거트(유지방 5%)","s":"150g / 450g","i":"우유, 유크림(우유), 요거트컬쳐(락토바실러스 불가리쿠스, 스트렙토코커스 테모필루스, 락토바실러스 아시도필루스, 비피도박테리움 애니멀리스, 락토바실러스 카제이)-유산균1억CFU/g이상 함유","k":"top","r":39,"note":"100g당 단백질 9g · 100g당 4,422원(450g 기준)","alt":[]},{"n":"[제주우유] 저지그릭요거트","s":"100g","i":"제주산 무항생제 원유(99.997%), 유산균(0.003%)","k":"top","r":40,"note":"100g당 단백질 9g · 100g당 4,580원","alt":["저지그릭 제주"]},{"n":"그농 무가당 무설탕 산미적은 그릭 요거트","s":"500g","i":"원유 99.9%, 유산균 0.1%","k":"top","r":41,"note":"100g당 단백질 8.9g","alt":[]},{"n":"[아프로그릭] 유당제로 시그니처 그릭요거트","s":"450g","i":"원유 99.974%(국산), 락타아제, 유산균","k":"top","r":42,"note":"100g당 단백질 8g · 100g당 2,422원","alt":[]},{"n":"밀크아트 수제요거트 무가당 그릭요거트","s":"100g / 500g / 1kg","i":"원유 99.95%, 유산균 0.05%(DVS)","k":"top","r":43,"note":"100g당 단백질 8g(영양 앱 기준) · 100g당 2,750원(1kg 기준)","alt":[]},{"n":"오아시스 아침 그릭요거트 마일드","s":"100g","i":"원유 99.996%, 복합유산균 0.04%","k":"top","r":44,"note":"100g당 단백질 8g · 100g당 3,200원","alt":[]},{"n":"유얼거트 플레인 그릭요거트","s":"130g / 450g","i":"원유 99.9%(국내산), 유산균 0.1%(덴마크산)","k":"top","r":45,"note":"100g당 단백질 7.2g · 100g당 2,692원","alt":[]},{"n":"숲골 꾸덕꾸덕 그릭요거트","s":"150g / 1kg","i":"무항생제 원유 99.996%(국산, 세균수기준 1A등급), 유산균 0.004%","k":"top","r":46,"note":"100g당 단백질 7g · 100g당 2,490원(1kg 기준)","alt":[]},{"n":"요즘 그릭요거트 소프트","s":"100g / 500g","i":"원유(국산)99.996%, 유산균혼합분말","k":"top","r":47,"note":"100g당 단백질 7g · 100g당 2,800원(500g 기준)","alt":[]},{"n":"서울우유 더 진한 그릭요거트 소프트","s":"100g / 450g","i":"우유(국산) 99.99%, 유산균","k":"top","r":48,"note":"100g당 단백질 7g · 100g당 3,211원","alt":[]},{"n":"오네쉬 수제 무가당 그릭 요거트","s":"350g / 500g","i":"국내산 1등급 원유(98%), 유산균 배양액(2%)","k":"top","r":49,"note":"100g당 단백질 7g · 100g당 3,400원(500g 기준)","alt":[]},{"n":"헤이필드 그릭요거트 플레인","s":"100g","i":"우유(국산) 99.99%, 유산균(덴마크산) 0.01%, 우유함유","k":"top","r":50,"note":"100g당 단백질 7g · 100g당 3,900원","alt":[]},{"n":"오네쉬 포켓 그릭 요거트","s":"100g","i":"국내산 1등급 원유(98%), 유산균 배양액(2%)","k":"top","r":51,"note":"100g당 단백질 7g · 100g당 4,500원","alt":[]},{"n":"곰곰 그릭요거트 소프트","s":"100g","i":"우유(국산), 유산균(덴마크산)","k":"top","r":52,"note":"100g당 단백질 6.9g · 100g당 2,470원","alt":[]},{"n":"그릭데이 그릭요거트 라이트","s":"100g / 450g","i":"원유 99.996%(국산), 복합유산균 0.004%","k":"top","r":53,"note":"100g당 단백질 6.75g · 100g당 2,778원","alt":[]},{"n":"i그릭요거트(무가당)","s":"95g","i":"원유99.99%(국산/무항생제), 유산균0.01%(프랑스)","k":"top","r":54,"note":"100g당 단백질 6.3g(영양 앱 기준)","alt":[]},{"n":"피코크 에이클래스 시그니처 그릭요거트","s":"450g","i":"1A 등급 원유(국산, 세균수기준) 99.971%, 유산균(복합유산균으로 1,800억/100g)","k":"top","r":55,"note":"100g당 단백질 6g · 100g당 998원","alt":[]},{"n":"후디스 그릭요거트 달지 않은 플레인","s":"450g","i":"1A등급 원유(국산, 세균수기준)99.9% [2배 농축원유(우유 약900mL/컵)], 유산균(복합유산균으로1,800억 이상/100g)","k":"top","r":56,"note":"100g당 단백질 6g(영양 앱 기준) · 100g당 1,351원","alt":[]},{"n":"임실치즈마을 짜먹는 그릭요거트 무가당 플레인","s":"120g","i":"무항생제원유(국산), 동결건조유산균1,2(덴마크산: Bifidobacterium spp, L.acidophilus, S.thermophilus, Lactobacillus delbrueckii subsp. bulgaricus) 총120억 CFU 이상/120g","k":"top","r":57,"note":"100g당 단백질 4.2g · 100g당 1,875원","alt":[]},{"n":"발효그릭요거트","s":"100g","i":"발효우유M99.99%(국산)[품목보고: 원유, 유산균, 락타아제], 유산균0.00003%(덴마크)","k":"top","r":58,"note":"단백질 수치는 아직 못 찾았어요 · 100g당 2,450원","alt":[]},{"n":"온드리목장 무가당 꾸덕한 그릭요거트","s":"1kg","i":"원유(국내산) 99.995%, 유산균 0.005% [품목보고: 원유, 유산균]","k":"top","r":59,"note":"단백질 수치는 아직 못 찾았어요 · 100g당 2,830원","alt":[]},{"n":"철원목장 수제 유기농 무가당 그릭요거트","s":"130g / 470g","i":"원유(국내산) 99.997%, 유산균 0.003%","k":"top","r":60,"note":"단백질 수치는 아직 못 찾았어요 · 100g당 4,670원(470g 기준). 제품명엔 '유기농'이 있지만 원재료 표시엔 '원유'로만 적혀 있어서 목초·유기농 묶음(1~10위)에는 넣지 않았어요","alt":[]},{"n":"후디스 그릭요거트 달지 않은 저지방","s":"450g / 80g","i":"1A등급 원유(국산, 세균수기준)99.9% [2배 농축원유(우유 약900mL/컵)], 유산균(복합유산균으로1,800억 이상/100g)","k":"top","r":61,"note":"100g당 단백질 6g · 100g당 1,351원","alt":[]},{"n":"서울우유 더진한 알룰로스 그릭요거트","s":"100g","i":"원유(국산)87.994%, 액상알룰로스, 유산균혼합분말","k":"top","r":62,"note":"단백질 수치는 아직 못 찾았어요 · 100g당 3,662원","alt":[]},{"n":"요즘 그릭요거트 알룰로스 블렌드","s":"100g","i":"우유(국산), 마이노멀알룰로스[품목보고: 알룰로오스, 스테비올배당체, 나한과추출물분말], 유산균혼합분말(덴마크산)","k":"top","r":63,"note":"단백질 수치는 아직 못 찾았어요 · 100g당 4,200원","alt":[]},{"n":"[요플] 수제 그릭요거트 꾸덕한 무가당","s":"140ml","i":"국산원유 99.9%, 유산균 0.1%","k":"hold","head":"원재료 표시를 확인하지 못했어요","x":[],"o":[],"alt":[],"why":"판매처에 원재료 표시사항 표가 없고 홍보 문구만 있었어요. 뒷면에 원유(우유)·유산균만 적혀 있는 게 확인되면 S 후보예요."},{"n":"그릭당 무가당 수제 플레인 그릭요거트","s":"500g","i":"원유 99.9%, 유산균 0.1%","k":"hold","head":"원재료 표시를 확인하지 못했어요","x":[],"o":[],"alt":[],"why":"판매처에 원재료 표시사항 표가 없고 홍보 문구만 있었어요. 뒷면에 원유(우유)·유산균만 적혀 있는 게 확인되면 S 후보예요."},{"n":"김그릭 수제 무가당 플레인 꾸덕 그릭요거트","s":"150g","i":"1등급 원유 99.9%, 유산균","k":"hold","head":"원재료 표시를 확인하지 못했어요","x":[],"o":[],"alt":[],"why":"판매처에 원재료 표시사항 표가 없고 홍보 문구만 있었어요. 뒷면에 원유(우유)·유산균만 적혀 있는 게 확인되면 S 후보예요."},{"n":"듀공 두유그릭요거트","s":"300g","i":"무첨가두유(미국, 캐나다, 러시아 non-gmo), 비건유산균","k":"hold","head":"우유가 아닌 식물성 베이스예요","x":[],"o":["무첨가두유"],"alt":[],"why":"우유 대신 두유로 만든 제품이라 우유 그릭요거트 기준(원유·유산균)으로 등급을 매길 수 없어요."},{"n":"맘모스그릭요거트","s":"500g","i":"원유 99.96%(1급A 국산), 유산균분말(이탈리아산) [품목보고: 우유, 발효유]","k":"hold","head":"원료 '발효유'의 속을 확인하지 못했어요","x":[],"o":["발효유"],"alt":["맘모스 플레인 그릭요거트"],"why":"라벨에는 원유와 유산균분말만 적혀 있는데, 품목제조보고에는 원료가 '우유, 발효유'로 올라가 있어요. 발효유 안에 무엇이 들었는지 확인하지 못해서 TOP에서 뺐어요."},{"n":"i그릭요거트(가당)","s":"95g","i":"원유95.99%(국산/무항생제), 유기농설탕4%, 유산균0.01%(프랑스)","k":"hold","head":"설탕(당)이 들어 있어요","x":["유기농설탕"],"o":[],"alt":[]},{"n":"메브갈(Mevgal) 그리스산 어센틱 무지방 그릭 요거트 플레인","s":"900g","i":"살균탈지우유, 요거트컬처(스트렙토코쿠스 써모필루스, 락토바실러스 불가리쿠스, 락토바실러스 아시도필루스, 비피도박테리움 락티스)","k":"hold","head":"원유 대신 살균탈지우유를 썼어요","x":["살균탈지우유"],"o":[],"alt":[]},{"n":"수제 무가당 무지방 그릭요거트 (이기호 생산자)","s":"500g (오리지날 / 무지방 옵션)","i":"분유*화원유(미국산) 99.995% 유산균(이탈리아) 0.005%","k":"hold","head":"분유를 물에 녹인 환원유예요","x":["분유*화원유"],"o":[],"alt":[]},{"n":"아침미소목장 자연방목 그릭요거트","s":"100g","i":"원유(제주산)95.234%, 유기농설탕4.761%, 복합유산균","k":"hold","head":"설탕(당)이 들어 있어요","x":["유기농설탕"],"o":[],"alt":[]},{"n":"어니스트그릭 로우슈가 스윗 오리지널 요거트","s":"100g","i":"우유(국산) 96.15%, 설탕, 유산균(덴마크산)","k":"hold","head":"설탕(당)이 들어 있어요","x":["설탕"],"o":[],"alt":[]},{"n":"초바니 그릭요거트 무지방 플레인","s":"150g","i":"탈지발효유[탈지우유, 요거트컬쳐(스트렙토코커스 써모필러스, 락토바실러스 불가리쿠스, 락토바실러스 아시도필러스, 비피도박테리움 애니멀리스, 락토바실러스 카제이, 락토바실러스 람노서스, 1,950억 이상/150g)]","k":"hold","head":"원유 대신 탈지발효유를 썼어요","x":["탈지발효유"],"o":[],"alt":[]},{"n":"커클랜드 시그니춰 무지방 그릭요거트","s":"907g","i":"컬처밀크(탈지우유, 락토바실러스 불가리쿠스, 스트렙토코커스 써모필러스, 락토바실러스 애시도필러스, 비피도박테리움 애니말리스, 락토바실러스 카제이)","k":"hold","head":"원유 대신 탈지우유를 썼어요","x":["탈지우유"],"o":[],"alt":[]},{"n":"코우카키스 그릭요거트 10%(오리지널)","s":"150g / 500g / 1000g","i":"살균우유 78.28%, 유크림, 우유단백, 락틱컬처","k":"hold","head":"우유단백을 따로 넣었어요","x":["우유단백"],"o":[],"alt":[]},{"n":"크리크리(Kri Kri) 어센틱 그릭 요거트","s":"500g","i":"탈지우유, 유크림, 요거트컬처","k":"hold","head":"원유 대신 탈지우유를 썼어요","x":["탈지우유"],"o":[],"alt":[]},{"n":"파예 토탈 0% 무지방 올 네츄럴 그릭 요거트","s":"150g / 450g","i":"탈지유98%, 요거트컬쳐(락토바실러스 불가리쿠스, 스트렙토코커스 써모필루스, 락토바실러스 아시도필루스, 비피도박테리움 애니멀리스, 락토바실러스 카제이)-유산균1억CFU/g이상 함유","k":"hold","head":"원유 대신 탈지유를 썼어요","x":["탈지유"],"o":[],"alt":[]},{"n":"파예 토탈 2% 저지방 올 네츄럴 그릭요거트 150g","s":"150g","i":"탈지유92%, 유크림(우유), 요거트컬쳐(락토바실러스 불가리쿠스, 스트렙토코커스 써모필루스, 락토바실러스 아시도필루스, 비피도박테리움 애니멀리스, 락토바실러스 카제이)-유산균1억CFU/g이상 함유","k":"hold","head":"원유 대신 탈지유를 썼어요","x":["탈지유"],"o":[],"alt":[]},{"n":"헬거트 무지방 무가당 무설탕 그릭헬거트","s":"500g","i":"분유*환원유(미국산) 99.995%, 유산균(이탈리아) 0.005%","k":"hold","head":"분유를 물에 녹인 환원유예요","x":["분유*환원유"],"o":[],"alt":[]},{"n":"헬거트 오리지널 무가당 무설탕 그릭헬거트","s":"500g","i":"분유*환원유(미국산) 99.995%, 유산균(이탈리아) 0.005%","k":"hold","head":"분유를 물에 녹인 환원유예요","x":["분유*환원유"],"o":[],"alt":[]},{"n":"후디스 그릭요거트 플레인","s":"450g / 80g","i":"1A등급 원유(국산, 세균수기준)93.9% [2배 농축원유(우유 약850mL/컵)], 원당, 유산균(복합유산균으로1,800억 이상/100g)","k":"hold","head":"설탕(당)이 들어 있어요","x":["원당"],"o":[],"alt":[]},{"n":"후디스 다이어트 무지방 그릭요거트","s":"400g","i":"1A등급 원유(국산, 세균수기준)92.2%, 알룰로오스, 농축우유단백분말(뉴질랜드), Bifidobacterium breve B-3 프로바이오틱스, 유산균","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["농축우유단백분말"],"o":[],"alt":[]},{"n":"후디스 유기농 그릭요거트 플레인","s":"80g","i":"[유기농 함량99.971%] 유기농 원유(국산)93.971%(유기농 우유 약150mL/컵), 유기농 설탕6%, 유산균(복합유산균으로1,500억 이상/80g)","k":"hold","head":"설탕(당)이 들어 있어요","x":["유기농 설탕"],"o":[],"alt":[]},{"n":"[피코크] 그릭 요거트 (구 SKU)","s":"450g","i":"원유 90%(국산), 유단백분말(덴마크산), 유크림(국산), 혼합탈지분유, 유산균","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유단백분말","혼합탈지분유"],"o":[],"alt":[]},{"n":"[피코크] 에이 클래스 그릭요거트","s":"450g","i":"원유 90%(국산), 유단백분말(덴마크산), 유크림(이탈리아산), 혼합탈지분유, 유산균 [우유 함유]","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유단백분말","혼합탈지분유"],"o":[],"alt":[]},{"n":"구르미 무지방 그릭 요거트","s":"150g","i":"무지방우유(국내산100%) 99.9%, 이눌린(치커리식이섬유), 유산균(덴마크), 유당 분해 효소","k":"hold","head":"무지방우유(탈지유)에 이눌린을 넣었어요","x":["무지방우유","이눌린"],"o":[],"alt":[]},{"n":"그릭데이 그릭요거트 무지방 프로22","s":"100g","i":"무지방우유 99.196%(국산), 유단백분말, 복합유산균","k":"hold","head":"무지방우유(탈지유)에 분말로 단백질을 채웠어요","x":["무지방우유","유단백분말"],"o":[],"alt":[]},{"n":"매일 바이오 그릭요거트 무가당 플레인","s":"150g / 400g / 800g / 80g","i":"원유 90%(국산), 유단백분말(덴마크산), 유크림(이탈리아산), 혼합탈지분유, 유산균(S. thermophilus, L. bulgaricus, L. rhamnosus, LGG유산균) 750억 이상/한 컵 당","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유단백분말","혼합탈지분유"],"o":[],"alt":[]},{"n":"상하목장 유기농 그릭요거트 무가당 플레인","s":"907g / 400g","i":"(유기농 함량 99.9%) 유기농원유 89.4%(국산), 유기농유단백분말(독일산), 유기농유크림(국산), 유기농탈지분유, 유산균(S. thermophilus, L. bulgaricus) 4,500억 CFU 이상(907g당)","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유기농유단백분말","유기농탈지분유"],"o":[],"alt":[]},{"n":"상하목장 유기농 그릭요거트 무가당 플레인","s":"80g","i":"유기농원유82.4%(국산), 유기농유크림(국산), 유기농유단백분말(독일산), 유기농탈지분유, 유산균(S. thermophilus, L. bulgaricus)1억이상/g당","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유기농유단백분말","유기농탈지분유"],"o":[],"alt":[]},{"n":"서울우유 파머스 그릭 무가당 플레인","s":"400g / 150g","i":"국산 원유90.526%(체세포수 기준1급, 세균수 기준1급A), 분리유단백분말(덴마크산), 유크림(국산), 탈지분유(국산), 유당분해효소, 유산균(S.thermophilus, L.bulgaricus)400억CFU이상/400g당","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["분리유단백분말","탈지분유"],"o":[],"alt":[]},{"n":"코우카키스 무지방 그릭요거트 0%","s":"500g / 150g / 1000g","i":"탈지우유 91.98%, 우유단백, 락틱컬처","k":"hold","head":"탈지우유에 우유단백을 따로 넣었어요","x":["탈지우유","우유단백"],"o":[],"alt":[]},{"n":"피코크 시그니처 고단백 그릭요거트","s":"450g","i":"1A 등급 원유(국산, 세균수기준), 탈지분유(뉴질랜드, 독일, 미국 등), 유크림(이탈리아, 스페인, 호주 등), 농축우유단백분말, 유산균(복합유산균으로 1,800억 이상/100g)","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["탈지분유","농축우유단백분말"],"o":[],"alt":[]},{"n":"후디스 고단백 무가당 그릭요거트","s":"400g","i":"1A등급 원유(국산, 세균수기준), 탈지분유(외국산:국가명은 홈페이지 별도 표시), 유크림(외국산:국가명은 홈페이지 별도 표시), 농축우유단백분말, 유산균(복합유산균으로1,800억 이상/100g)","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["탈지분유","농축우유단백분말"],"o":[],"alt":[]},{"n":"덴마크 하이 그릭 요거트","s":"150g / 80g / 400g","i":"원유94%(국산), 분리유단백분말(미국산), 유청단백분말(미국산), 락타아제, 산화아연, 유산균1, 유산균2, 유산균3","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["분리유단백분말","유청단백분말","산화아연"],"o":[],"alt":[]},{"n":"어니스트그릭 코코넛 그릭요거트","s":"100g","i":"코코넛밀크(베트남산) 94.85%, 프락토올리고당, 타피오카전분(태국산), 아라비아검, 유산균(덴마크산)","k":"hold","head":"우유가 아닌 식물성 베이스예요","x":["프락토올리고당","타피오카전분","아라비아검"],"o":["코코넛밀크"],"alt":[]},{"n":"GS 리얼프라이스 락토프리 그릭요거트","s":"400g","i":"원유(국산) 89.4%, 유크림(국산), 유단백질분말(덴마크산), 혼합탈지분유, 유청단백분말, 젤라틴(피쉬), 유당분해효소, 복합유산균 7.5억 이상/g","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유단백질분말","혼합탈지분유","유청단백분말","젤라틴"],"o":[],"alt":[]},{"n":"매일 바이오 플레인 무지방 그릭요거트","s":"907g","i":"탈지유 88.5%(국산), 유단백분말(독일산), 폴리덱스트로스, 유청단백분말, 유산균(L. bulgaricus, S. thermophilus, L. acidophilus, Bifidobacterium, L. casei, L. paracasei) 1억 CFU/g 이상","k":"hold","head":"탈지유에 분말 원료로 꾸덕함과 단백질을 채웠어요","x":["탈지유","유단백분말","폴리덱스트로스","유청단백분말"],"o":[],"alt":[]},{"n":"5K프라이스 무가당 그릭요거트","s":"150g (2입)","i":"원유(국산), 정제수, 농축우유단백분말(미국산), 혼합분유(네덜란드산), 유크림, 스테비올배당체(감미료), 유산균, 우유응고효소 우유함유","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["농축우유단백분말","혼합분유"],"o":["정제수","스테비올배당체","우유응고효소"],"alt":[]},{"n":"풀무원다논 그릭시그니처 플레인","s":"150g","i":"원유(국산), 정제수, 농축우유단백분말(미국산), 혼합분유(네덜란드산), 유크림, 스테비올배당체(감미료), 유산균, 우유응고효소","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["농축우유단백분말","혼합분유"],"o":["정제수","스테비올배당체","우유응고효소"],"alt":[]},{"n":"매일 바이오 그릭요거트 to go 플레인","s":"120g","i":"원유(국산), 정제수, 설탕, 혼합탈지분유(네덜란드산), 유단백분말(덴마크산), 유크림, 블루치즈분말, 유산균(S. thermophilus, L. bulgaricus, L. rhamnosus, LGG유산균)600억이상/한 팩당","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["설탕","혼합탈지분유","유단백분말","블루치즈분말"],"o":["정제수"],"alt":[]},{"n":"매일 바이오 그릭요거트 플레인","s":"400g","i":"원유(국산), 정제수, 설탕, 혼합탈지분유(네덜란드산), 유단백분말(덴마크산), 유크림, 블루치즈분말, 유산균(S. thermophilus, L. bulgaricus, L. rhamnosus, LGG유산균) 2,000억 CFU 이상/400g당","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["설탕","혼합탈지분유","유단백분말","블루치즈분말"],"o":["정제수"],"alt":[]},{"n":"매일 바이오 그릭요거트 무가당 플레인 저지방","s":"400g","i":"탈지유(국산), 원유(국산), 유단백분말(덴마크산), 혼합탈지분유, 폴리덱스트로스, 유청단백분말, 유산균(S. thermophilus, L. bulgaricus, L. rhamnosus, LGG유산균) 2,000억 이상/400g 이상","k":"hold","head":"탈지유에 분말 원료로 꾸덕함과 단백질을 채웠어요","x":["탈지유","유단백분말","혼합탈지분유","폴리덱스트로스","유청단백분말"],"o":[],"alt":[]},{"n":"상하목장 유기농 그릭요거트 플레인","s":"80g","i":"유기농원유74.2%(국산), 유기농플레인시럽10%(유기농설탕, 사과산), 유기농유크림(국산), 유기농유단백분말(독일산), 유기농탈지분유, 유산균(S. thermophilus, L. bulgaricus)1억이상/g당","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유기농플레인시럽","유기농설탕","사과산","유기농유단백분말","유기농탈지분유"],"o":[],"alt":[]},{"n":"코코넛 데이지 그릭요거트","s":"200g","i":"코코넛 95.41% (코코넛밀크(베트남산) 76.3%, 코코넛 밀크분말(베트남산) 19% (코코넛밀크97%, 타피오카2%, 아카시아검1%), 유산균, 프락토올리고당","k":"hold","head":"우유가 아닌 식물성 베이스예요","x":["밀크분말","아카시아검","프락토올리고당"],"o":["코코넛","코코넛밀크","타피오카"],"alt":[]},{"n":"남양유업 불가리스 그릭 설탕무첨가 플레인","s":"80g","i":"원유(국산), 정제수, 유단백질분말1(오스트리아산), 유크림(국산), 유단백질분말2, 변성전분, 아미드펙틴, 젤라틴(피쉬), 유당분해효소, 유산균(Bulgaris kor-91), 복합유산균 7.5억 이상/g","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유단백질분말1","유단백질분말2","변성전분","아미드펙틴","젤라틴"],"o":["정제수"],"alt":[]},{"n":"파스퇴르 그릭","s":"400g","i":"원유(국산), 혼합분유[외국산: 벨기에, 네덜란드, 독일 등(탈지분유, 탈염유청분말)], 유크림(국산), 분리유단백, 폴리덱스트로스, 유당분해효소, 효소처리스테비아(감미료), 복합유산균400억CFU/400g","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합분유","탈지분유","탈염유청분말","분리유단백","폴리덱스트로스","효소처리스테비아"],"o":[],"alt":[]},{"n":"풀무원다논 그릭 설탕무첨가 플레인 무감미료","s":"800g","i":"원유(국산), 정제수, 혼합분유(네덜란드산)(탈지분유, 농축우유단백분말), 농축우유단백분말(호주산), 변성전분, 젤라틴(피쉬), 락타아제, 우유응고효소, 유산균1(S. thermophilus, L. bulgaricus), 유산균2(S. thermophilus, L. bulgaricus) …","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합분유","탈지분유","농축우유단백분말","변성전분","젤라틴"],"o":["정제수","우유응고효소"],"alt":[]},{"n":"매일 바이오 그릭요거트 딜라이트 무가당 플레인","s":"80g","i":"원유(국산), 정제수, 혼합탈지분유(탈지분유, 농축유단백분말/네덜란드), 폴리덱스트로스(식이섬유), 유단백분말1(독일산), 유단백분말2, 유당분해효소, 유산균(S. thermophilus, L. bulgaricus, L. rhamnosus, LGG유산균)300억CFU/컵 이상","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합탈지분유","탈지분유","농축유단백분말","폴리덱스트로스","유단백분말1","유단백분말2"],"o":["정제수"],"alt":[]},{"n":"불가리스 그릭 설탕무첨가 플레인","s":"150g / 400g","i":"원유(국산)90%, 정제수, 유단백질분말1(오스트리아산), 유크림(국산), 유청단백분말, 유단백질분말2, 변성전분, 아미드펙틴, 젤라틴(피쉬), 유당분해효소, 유산균(Bulgaris kor-91), 복합유산균7.5억이상/g","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유단백질분말1","유청단백분말","유단백질분말2","변성전분","아미드펙틴","젤라틴"],"o":["정제수"],"alt":[]},{"n":"불가리스 그릭 프로틴 플레인","s":"150g / 400g","i":"원유(국산), 정제수, 유단백질분말(오스트리아산), 유크림(국산), 혼합탈지분유, 유청단백분말, 향료, 수크랄로스(감미료), 유당분해효소, 젤라틴(피쉬), 유산균(Bulgaris kor-91), 복합유산균7.5억이상/g","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유단백질분말","혼합탈지분유","유청단백분말","향료","수크랄로스","젤라틴"],"o":["정제수"],"alt":[]},{"n":"매일 바이오 그릭요거트 플레인","s":"150g","i":"원유 81%(국산), 테이스티시럽[설탕, 알룰로스 S200F, 변성전분, 아미드펙틴, 향료], 유단백분말(덴마크산), 유크림(이탈리아산), 혼합탈지분유, 유산균(S. thermophilus, L. bulgaricus, L. rhamnosus, LGG유산균) 750억 이상/한 컵 당","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["테이스티시럽","설탕","변성전분","아미드펙틴","향료","유단백분말","혼합탈지분유"],"o":[],"alt":[]},{"n":"홈플러스시그니처 그릭요거트","s":"450g","i":"원유(국산, 세균수 기준 1급A), 혼합분유(탈지분유, 유청분말)(외국산-제조원 홈페이지 별도 표기), 농축유단백(독일산), 변성전분, 젤라틴, 아미드펙틴, 유산균","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합분유","탈지분유","유청분말","농축유단백","변성전분","젤라틴","아미드펙틴"],"o":[],"alt":["그릭 요거트"],"why2":"같은 이름의 100g 제품은 배합이 달라서 S등급이에요."},{"n":"T스탠다드 무가당 그릭요거트","s":"900g","i":"원유(국산), 정제수, 혼합분유(네덜란드산)(탈지분유, 농축우유단백분말), 농축우유단백분말, 변성전분, 젤라틴(피쉬), 유청단백분말, 락타아제, 스테비올배당체(감미료), 유산균 …","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합분유","탈지분유","농축우유단백분말","변성전분","젤라틴","유청단백분말"],"o":["정제수","스테비올배당체"],"alt":[]},{"n":"동원 덴마크 그릭 요거트 오리지널","s":"100g","i":"원유(국산), 유청(국산), 유크림(국산), 농후발효유[원유, 올리고당, 혼합분유, 변성전분, 유산균], 유청단백분말(분리유청단백질, 대두레시틴), 산도조절제, 정제소금","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["유청","올리고당","혼합분유","변성전분","유청단백분말","대두레시틴","산도조절제"],"o":["정제소금"],"alt":[]},{"n":"불가리스 그릭 알룰로스 플레인","s":"150g / 400g","i":"원유(국산), 정제수, 유크림(국산), 혼합탈지분유(네덜란드산), 알룰로오스, 유단백질분말1, 유단백질분말2, 유청단백분말, 변성전분, 아미드펙틴, 젤라틴(피쉬), 유당분해효소, 유산균(Bulgaris kor-91), 복합유산균7.5억이상/g","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합탈지분유","유단백질분말1","유단백질분말2","유청단백분말","변성전분","아미드펙틴","젤라틴"],"o":["정제수"],"alt":[]},{"n":"풀무원다논 그릭 빅팟 설탕무첨가 플레인","s":"400g / 150g / 90g / 80g","i":"원유(국산), 정제수, 혼합분유(네덜란드산)(탈지분유, 농축우유단백분말), 농축우유단백분말(호주산), 변성전분, 젤라틴(피쉬), 유청단백분말, 락타아제, 스테비올배당체(감미료), 유산균, 우유응고효소","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합분유","탈지분유","농축우유단백분말","변성전분","젤라틴","유청단백분말"],"o":["정제수","스테비올배당체","우유응고효소"],"alt":[]},{"n":"요플레 그릭 달지 않은 플레인","s":"80g","i":"원유93.6%(국산), 혼합분유(외국산(네덜란드, 아일랜드, 독일 등)), 분리우유단백분말(덴마크산), 유청단백분말, 변성전분, 덱스트린, 식용유지, 글리세린지방산에스테르, 레시틴, 탄산마그네슘, 유산균주(유산균1억CFU/mL 이상)","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합분유","분리우유단백분말","유청단백분말","변성전분","덱스트린","식용유지","글리세린지방산에스테르","레시틴","탄산마그네슘"],"o":[],"alt":[]},{"n":"hy 메치니코프 락토프리 그릭요거트 무가당 플레인","s":"400g","i":"원유(국산) 88%, 혼합분유(네덜란드산), 농축유단백분말(외국산: 스페인, 스위스, 리투아니아 등), 유크림(국산), 혼합제제(변성전분, 말토덱스트린), 안정제, 유화제, 영양강화제, 효소제1, 효소제2, 유산균(유산균1, 유산균2, L.casei HY2782 0.0002%) 3,000억 CFU/컵","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합분유","농축유단백분말","혼합제제","변성전분","말토덱스트린","안정제","유화제","영양강화제","효소제1","효소제2"],"o":[],"alt":[]},{"n":"연세유업 세브란스 A2 그릭 무가당 플레인","s":"80g","i":"A2원유(국산), 탈지분유(미국산), 유청단백분말(뉴질랜드산), 유크림(국산), 변성전분, 피쉬젤라틴, 분리유단백분말, 혼합제제(정제수, 규소수지, 폴리소르베이트65, 소르비탄지방산에스테르, 셀룰로스검), 프로바이오틱스(유산균 1억 CFU/g)","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["탈지분유","유청단백분말","변성전분","피쉬젤라틴","분리유단백분말","혼합제제","규소수지","폴리소르베이트65","소르비탄지방산에스테르","셀룰로스검"],"o":["정제수"],"alt":[]},{"n":"요플레 그릭 마일드","s":"400g","i":"원유88.2%(국산), 정제수, 혼합분유(외국산(네덜란드, 아일랜드, 독일 등)), 분리우유단백분말(덴마크산), 변성전분, 덱스트린, 유청단백분말, 젤라틴, 식물성유지, 글리세린지방산에스테르, 레시틴, 탄산마그네슘, 유산균주(유산균1억CFU/mL 이상)","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합분유","분리우유단백분말","변성전분","덱스트린","유청단백분말","젤라틴","식물성유지","글리세린지방산에스테르","레시틴","탄산마그네슘"],"o":["정제수"],"alt":[]},{"n":"요플레 그릭 마일드 무가당 플레인","s":"180g / 900g","i":"원유(국산), 정제수, 혼합분유(네덜란드산), 변성전분, 덱스트린, 분리우유단백분말(캐나다산), 유청단백분말, 젤라틴, 식물성유지, 글리세린지방산에스테르, 레시틴, 탄산마그네슘, 유산균주(유산균 1억 CFU/ml 이상)","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["혼합분유","변성전분","덱스트린","분리우유단백분말","유청단백분말","젤라틴","식물성유지","글리세린지방산에스테르","레시틴","탄산마그네슘"],"o":["정제수"],"alt":[]},{"n":"매일 바이오 그릭요거트 딜라이트 플레인","s":"80g","i":"원유(국산), 정제수, 치즈시럽(설탕, 변성전분, 가공치즈, 레몬농축액, 로커스트콩검), 혼합탈지분유(탈지분유, 농축유단백분말/네덜란드), 폴리덱스트로스(식이섬유), 유단백분말1(독일산), 유단백분말2, 유당분해효소, 유산균(S.thermophilus, L.bulgaricus, L.rhamnosus, LGG유산균)300억CFU/컵 이상","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["치즈시럽","설탕","변성전분","가공치즈","로커스트콩검","혼합탈지분유","탈지분유","농축유단백분말","폴리덱스트로스","유단백분말1","유단백분말2"],"o":["정제수","레몬농축액"],"alt":[]},{"n":"풀무원다논 그릭 빅팟 플레인","s":"400g / 90g","i":"원유(국산), 정제수, 치즈플레인시럽[정백당, 치즈(호주산), 변성전분, 향료, 레몬농축과즙(이스라엘산)], 혼합분유(네덜란드산)(탈지분유, 농축우유단백분말), 농축우유단백분말, 변성전분, 젤라틴(피쉬), 유청단백분말, 락타아제, 스테비올배당체(감미료), 유산균, 우유응고효소","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["치즈플레인시럽","정백당","변성전분","향료","혼합분유","탈지분유","농축우유단백분말","젤라틴","유청단백분말"],"o":["정제수","치즈","레몬농축과즙","스테비올배당체","우유응고효소"],"alt":[]},{"n":"요플레 그릭 플레인","s":"80g","i":"원유84.3%(국산), 플레인그릭블렌드(정제수, 설탕, 향료, 산도조절제), 혼합분유(외국산(네덜란드, 아일랜드, 독일 등)), 분리우유단백분말(덴마크산), 유청단백분말, 변성전분, 덱스트린, 식용유지, 글리세린지방산에스테르, 레시틴, 탄산마그네슘, 유산균주(유산균1억CFU/mL 이상)","k":"hold","head":"분말 원료로 꾸덕함과 단백질을 채웠어요","x":["플레인그릭블렌드","설탕","향료","산도조절제","혼합분유","분리우유단백분말","유청단백분말","변성전분","덱스트린","식용유지","글리세린지방산에스테르","레시틴","탄산마그네슘"],"o":["정제수"],"alt":[]}]};
+const TOPS = DATA.tops, ROWS = DATA.rows;
+const NTOP = TOPS.length, NS = TOPS.filter(t => t.grade==="S").length, NTIER = TOPS.filter(t => t.tier).length;
+
+const ALIAS = [
+  ["파예","fage","페이지"],["초바니","chobani"],["코우카키스","koukakis"],["크리크리","krikri"],["메브갈","mevgal"],["커클랜드","kirkland","코스트코"],
+  ["요플레","yoplait","빙그레"],["불가리스","bulgaris","남양"],["메치니코프","hy","에치와이","야쿠르트"],["룩트","lukt"],["요빌","yovill"],["요즘","yozm"],
+  ["피코크","peacock","이마트"],["노브랜드","nobrand"],["그릭데이","greekday"],["그릭오","greeko"],["다논","danone","풀무원","액티비아"],
+  ["매일","매일유업","maeil"],["서울우유","seoulmilk"],["상하목장","상하","sangha"],["덴마크","동원","dongwon"],["후디스","일동후디스","hudis","foodis"],
+  ["범산","범산목장"],["두레","두레생협"],["i그릭","아이그릭","자연드림","아이쿱","icoop"],["홈플러스","homeplus"],["곰곰","gomgom","쿠팡"],
+  ["오아시스","oasis"],["밀키요","milkyo"],["파인드","find"],["어니스트","honest"],["슈퍼100","super100","슈퍼백"],["까망","요하트"],
+  ["헤이필드","heyfield"],["헬거트","healgurt"],["5k","5k프라이스","오케이프라이스"],["t스탠다드","tstandard","티스탠다드"],["gs","지에스","리얼프라이스"],
+  ["연세","연세유업","세브란스","a2"],["파스퇴르","pasteur"],["팜프레쉬","farmfresh"],["유니드","uneed"],["숲골","임실"],["아침미소","아침미소목장"],
+  ["제주우유","저지"],["제주축산","제주목장"],["요플","yopl"],["식단요정"],["셀렉더요그"],["밀크아트","milkart"],["유얼거트"],["온드리"],["철원목장"]
+];
+const norm = s => String(s).toLowerCase().normalize("NFC").replace(/[\s·\-_/().,'’"%&!+:;\[\]]/g,"");
+const STOP = new Set(["그릭요거트","그릭요구르트","요거트","요구르트","그릭","플레인","yogurt","greekyogurt","greek"]);
+
+/* 한 줄 = 한 제품(같은 제품의 다른 용량은 한 줄) */
+const GROUPS = ROWS.map((r, idx) => {
+  let hay = norm(r.n) + "|" + (r.alt||[]).map(norm).join("|");
+  ALIAS.forEach(grp => { if (grp.some(a => hay.includes(norm(a)))) hay += "|" + grp.map(norm).join("|"); });
+  return {...r, idx, sizes:[r.s], hay, nn: norm(r.n)};
+});
+
+function tokens(q){ return q.split(/\s+/).map(norm).filter(t => t && !STOP.has(t)); }
+function search(q){
+  const ts = tokens(q);
+  if (!ts.length) return [];
+  const hit = GROUPS.filter(g => ts.every(t => g.hay.includes(t)));
+  return hit.sort((a,b) => rankKey(a) - rankKey(b));
+}
+function rankKey(g){ return g.k==="top" ? g.r : 100 + g.idx; }
+function bigrams(s){ const o=[]; for(let i=0;i<s.length-1;i++) o.push(s.slice(i,i+2)); return o; }
+function fuzzy(q){
+  const a = bigrams(norm(q)); if (a.length < 1) return [];
+  return GROUPS.map(g => { const b = bigrams(g.nn); const set = new Set(b); const m = a.filter(x => set.has(x)).length; return {g, s: 2*m/(a.length+b.length)}; })
+    .filter(x => x.s >= .3).sort((x,y) => y.s-x.s).slice(0,5).map(x => x.g);
+}
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function sizeText(g){ return g.s || ""; }
+
+/* ---------- suggestions ---------- */
+const $q = document.getElementById("q"), $s = document.getElementById("sugg"), $out = document.getElementById("out");
+let current = [], activeIdx = -1;
+function renderSugg(list){
+  current = list.slice(0, 6); activeIdx = -1;
+  if (!current.length){ $s.hidden = true; $s.innerHTML=""; return; }
+  $s.innerHTML = current.map((g,i) => `<li role="option"><button type="button" class="opt" data-i="${i}"><span class="t">${esc(g.n)} <small>${esc(sizeText(g))}</small></span></button></li>`).join("");
+  $s.hidden = false;
+}
+$q.addEventListener("input", () => renderSugg($q.value.trim() ? search($q.value) : []));
+$q.addEventListener("keydown", e => {
+  if ($s.hidden) return;
+  if (e.key==="ArrowDown"||e.key==="ArrowUp"){ e.preventDefault(); activeIdx = (activeIdx + (e.key==="ArrowDown"?1:-1) + current.length) % current.length;
+    [...$s.querySelectorAll(".opt")].forEach((b,i)=>b.classList.toggle("on", i===activeIdx)); }
+  if (e.key==="Escape") $s.hidden = true;
+});
+$s.addEventListener("click", e => { const b = e.target.closest(".opt"); if (b) pick(current[+b.dataset.i]); });
+document.getElementById("f").addEventListener("submit", e => {
+  e.preventDefault();
+  if (!$s.hidden && activeIdx >= 0) return pick(current[activeIdx]);
+  const q = $q.value.trim();
+  if (!q){ $q.focus(); return; }
+  const list = search(q);
+  if (list.length === 1) return pick(list[0]);
+  if (list.length > 1) return showChoices(list, `「${q}」 검색 결과 ${list.length}개예요. 어떤 제품이에요?`);
+  const fz = fuzzy(q);
+  if (fz.length) return showChoices(fz, `「${q}」와 같은 이름은 없어요. 혹시 이 중에 있나요?`, q);
+  showNotFound(q);
+});
+["매일","풀무원","요플레","그릭데이","범산목장"].forEach(w => {
+  const b = document.createElement("button"); b.type="button"; b.className="chip"; b.textContent=w;
+  b.onclick = () => { $q.value = w; $s.hidden = true; const f = document.getElementById("f"); f.requestSubmit ? f.requestSubmit() : f.dispatchEvent(new Event("submit",{cancelable:true})); };
+  document.getElementById("ex").appendChild(b);
+});
+
+function showChoices(list, title, q){
+  $s.hidden = true;
+  const shown = list.slice(0, 12);
+  $out.innerHTML = `<div class="card"><p class="msg">${esc(title)}</p>
+    <ul class="sugg">${shown.map((g,i)=>`<li><button type="button" class="opt" data-c="${i}"><span class="t">${esc(g.n)} <small>${esc(sizeText(g))}</small></span></button></li>`).join("")}</ul>
+    ${list.length>12?`<p class="note">${list.length-12}개가 더 있어요. 이름을 조금 더 길게 넣어보세요.</p>`:""}
+    ${q?`<button type="button" class="link" id="nf">여기 없어요</button>`:""}</div>`;
+  $out.querySelectorAll("[data-c]").forEach(b => b.onclick = () => pick(shown[+b.dataset.c]));
+  const nf = document.getElementById("nf"); if (nf) nf.onclick = () => showNotFound(q);
+  scrollOut();
+}
+
+/* ---------- result ---------- */
+/* 사진 대신 그림 컵: 통과 = 라임 뚜껑, 탈락 = 회색 뚜껑 */
+function cup(label, tone){
+  const lid = tone==="hold" ? "#8C8984" : "#EBF745", body = tone==="hold" ? "#E4E1DB" : "#FFFFFF";
+  const t = esc(label.slice(0, 7));
+  const fs = label.length <= 3 ? 13 : label.length <= 5 ? 11 : 9;
+  return `<svg viewBox="0 0 96 112" width="96" height="112" role="img" aria-label="${t} 요거트 컵 그림">
+    <path d="M17 32 H79 L71 100 Q70 106 64 106 H32 Q26 106 25 100 Z" fill="${body}" stroke="#2A2A2E" stroke-width="2"/>
+    <rect x="11" y="20" width="74" height="13" rx="5" fill="${lid}" stroke="#2A2A2E" stroke-width="2"/>
+    <rect x="22" y="52" width="52" height="26" fill="#FBFAF7" stroke="#2A2A2E" stroke-width="2"/>
+    <text x="48" y="69" text-anchor="middle" font-family="Gothic A1, sans-serif" font-weight="800" font-size="${fs}" fill="#1A191C">${t}</text></svg>`;
+}
+const reEsc = t => esc(t).replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+function highlightIng(s, red, org){
+  const e = esc(s); const R = red||[], O = org||[];
+  if (!R.length && !O.length) return e;
+  const cls = new Map(); R.forEach(t => cls.set(esc(t).toLowerCase(),"av")); O.forEach(t => { if (!cls.has(esc(t).toLowerCase())) cls.set(esc(t).toLowerCase(),"hv"); });
+  const terms = [...cls.keys()].sort((a,b) => b.length-a.length);
+  const re = new RegExp("("+terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|")+")","gi");
+  return e.replace(re, m => `<mark class="${cls.get(m.toLowerCase())||"av"}">${m}</mark>`);
+}
+const SHORT_FIX = {"유기농":"우리울타리","hy":"메치니코프","남양유업":"불가리스","GS":"리얼프라이스","수제":"수제그릭","매일바이오":"매일","i그릭요거트(무가당)":"i그릭","i그릭요거트(가당)":"i그릭"};
+function brandOf(name){
+  let m = name.match(/^\[([^\]]+)\]/) || name.match(/^\(([^)]+)\)/);
+  let b = m ? m[1] : name.split(/\s/)[0];
+  if (/^유기농 우리울타리/.test(name)) b = "우리울타리";
+  return SHORT_FIX[b] || b.replace(/그릭요거트$/,"").replace(/\(.*\)$/,"") || b;
+}
+
+let owned = null, lastQuery = "", notFound = false;
+function verdictOf(g){ return g.k==="top" ? TOPS[g.r-1].grade : "탈락"; }
+function pick(g){
+  $s.hidden = true; $q.blur();
+  owned = g.k==="top" ? g.r : null; lastQuery = g.n; notFound = false;
+  if (g.k==="top") renderTop(g); else renderOther(g);
+  track("test_result", {verdict: verdictOf(g), product: g.n.slice(0,95)});
+  scrollOut();
+}
+const ICON = {
+  again:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>',
+  ask:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6"/><path d="M12 17h.01"/></svg>'
+};
+/* 추천 구매 버튼 하나에 「이걸로 바꿔보세요」 + 추천 제품 + 작은 「박슈가 추천 그릭 구매하기」를 담는다.
+   swap = true → 탈락·목록 없음, false → TOP 통과 */
+function actionsHTML(swap){
+  return `<div class="actions">
+    <a class="btn buy combo" id="buy" href="#" target="_blank" rel="noopener sponsored">
+      <span class="big">${swap ? "이걸로 바꿔보세요" : "이것도 먹어보세요"}</span>
+      <span class="pick"><span class="gb">S</span><span class="sn" id="buyName"></span></span>
+      <small>박슈가 추천 그릭 구매하기</small>
+      <span class="disc" id="disc" hidden>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</span>
+    </a>
+    ${NOTION_URL ? `<a class="btn notion" href="${NOTION_URL}" target="_blank" rel="noopener">그릭요거트 전수조사 결과보기<small>126개 전체 순위·원재료</small></a>` : ""}
+    <div class="trio">
+      <button type="button" class="btn" id="again">${ICON.again}다시 테스트</button>
+      <a class="btn" id="req" href="${FORM_URL}" target="_blank" rel="noopener">${ICON.ask}조사 요청하기</a>
+    </div>
+  </div>`;
+}
+function rollBuy(){
+  const pool = Object.keys(BUY).map(Number).filter(r => r !== owned);
+  const r = pool[Math.floor(Math.random()*pool.length)];
+  const t = TOPS[r-1];
+  const arr = [].concat((BUY[r]||{}).coupang || []).filter(Boolean);
+  const i = Math.floor(Math.random()*arr.length);
+  const cp = arr.length ? arr[i] : "";
+  const url = cp || Object.values(t.links)[0] || "#";
+  const label = ((BUY[r]||{}).label || [])[arr.length ? i : 0] || t.name;
+  return {r, t, url, cp: !!cp, label};
+}
+function wireActions(){
+  const $b = document.getElementById("buy"), $d = document.getElementById("disc");
+  const p = rollBuy();
+  $b.href = p.url; $d.hidden = !p.cp;
+  document.getElementById("buyName").textContent = p.label;
+  document.getElementById("again").onclick = () => { $out.innerHTML=""; $q.value=""; window.scrollTo({top:0,behavior:"smooth"}); setTimeout(()=>$q.focus({preventScroll:true}), 300); };
+  if (notFound) document.getElementById("req").href = FORM_URL + "?usp=pp_url&" + FORM_ENTRY.what + "=" + encodeURIComponent(lastQuery)
+    + "&" + FORM_ENTRY.kind + "=" + encodeURIComponent("그릭요거트 테스트에 제 제품이 없어요");
+}
+/* 탈락 결과: 원재료에서 칠해진 성분 종류로 문장을 고른다 */
+function avoidLine(html){
+  const red = new Set((html.match(/<mark class="av">([^<]+)<\/mark>/g) || [])).size;
+  const org = new Set((html.match(/<mark class="hv">([^<]+)<\/mark>/g) || [])).size;
+  const out = [];
+  if (red) out.push(`<span class="red">빨간 글씨</span> ${red > 1 ? "성분들은" : "성분은"} 슈가 기준에 안 맞아요`);
+  if (org) out.push(`<span class="org">주황 글씨</span>는 아직 판단을 보류한 성분이에요`);
+  return out.length ? `<p class="verdict-line">${out.join("<br>")}</p>` : "";
+}
+
+function gradeLineOf(t){
+  if (t.grade==="A") return `A등급 ${t.rank-NS}위`;
+  return t.tier ? `${t.tier} S등급 ${t.rank}위` : `S등급 ${t.rank}위`;
+}
+function renderTop(g){
+  const t = TOPS[g.r-1];
+  lastResult = `내 그릭요거트는 박슈가 TOP ${NTOP} 통과! (${t.grade}등급)`;
+  const tags = [t.tier, t.why].filter(Boolean);
+  const msg = t.grade==="S" ? (t.tier ? "원유까지 좋은 걸 고르셨어요" : "아주 잘 고르고 계셨어요") : "잘 고르고 계셨어요";
+  const aNote = t.why==="저지방" ? "원유·유산균만 들어 있지만 저지방 제품이라 S가 아니라 A등급이에요."
+    : t.why ? "원유·유산균에 대체당(알룰로스)만 더해서 A등급이에요." : "";
+  $out.innerHTML = `<div class="card pass">
+    <div class="verdict"><span class="stamp pass anim">통과!</span>
+      <div class="rank"><b>${esc(gradeLineOf(t))}</b><span>TOP ${NTOP} 중 ${t.rank}순위</span></div></div>
+    <div class="prod"><div class="ph">${cup(brandOf(t.name), "top")}</div>
+      <div class="nm"><h2>${esc(t.name)}</h2>
+        ${tags.length?`<div class="types">${tags.map(x=>`<span class="tier">${esc(x)}</span>`).join("")}</div>`:""}
+        <div class="mine">${esc(sizeText(g))}</div></div></div>
+    <div class="ing"><span class="lb">원재료명</span><p>${highlightIng(g.i)}</p></div>
+    <p class="msg big">${msg}</p>
+    ${aNote?`<p class="note">${esc(aNote)}</p>`:""}
+    ${g.note?`<p class="note">${esc(g.note)}</p>`:""}</div>
+    ${actionsHTML(false)}`;
+  wireActions();
+  burst();
+}
+function renderOther(g){
+  lastResult = "내 그릭요거트는 박슈가 그릭요거트 테스트에서 탈락했어 😂";
+  const chips = [...(g.x||[]).map(x=>[x,"av"]), ...(g.o||[]).map(x=>[x,"hv"])];
+  const extra = chips.length ? `<div class="extra">${chips.map(([x,c])=>`<span class="${c}">${esc(x)}</span>`).join("")}</div>` : "";
+  const body = g.why || "다음에 고를 땐 뒷면 원재료명에 원유(우유)와 유산균만 있는지 보세요.";
+  const ingHTML = highlightIng(g.i, g.x, g.o);
+  $out.innerHTML = `<div class="card">
+    <div class="verdict"><span class="stamp hold">탈락</span><div class="rank"><b>${esc(g.head)}</b><span>TOP ${NTOP}에 없는 제품</span></div></div>
+    <div class="prod"><div class="ph">${cup(brandOf(g.n), "hold")}</div>
+      <div class="nm"><h2>${esc(g.n)}</h2><div class="mine">${esc(sizeText(g))}</div></div></div>
+    <div class="ing"><span class="lb">원재료명</span><p>${ingHTML}</p></div>
+    ${extra}
+    ${avoidLine(ingHTML)}
+    <p class="note">${esc(body)}</p>
+    ${g.why2?`<p class="note">${esc(g.why2)}</p>`:""}</div>
+    ${actionsHTML(true)}`;
+  wireActions();
+}
+function showNotFound(q){
+  owned = null; lastQuery = q; notFound = true;
+  track("test_result", {verdict: "목록없음", product: q.slice(0,95)});
+  $out.innerHTML = `<div class="card">
+    <div class="verdict"><span class="stamp hold">?</span><div class="rank"><b>아직 조사 목록에 없는 이름이에요</b><span>「${esc(q)}」</span></div></div>
+    <p class="note">브랜드 이름만 넣어보거나, 띄어쓰기를 바꿔서 다시 해보세요. 그래도 없다면 뒷면 원재료명을 직접 확인해 보세요. <b>원유(우유)와 유산균</b>만 적혀 있으면 기준 통과예요. 이번 조사는 플레인(무맛) 그릭요거트만 봤어요.</p></div>
+    ${actionsHTML(true)}`;
+  wireActions(); scrollOut();
+}
+function scrollOut(){ requestAnimationFrame(() => $out.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto":"smooth", block:"start"})); }
+function burst(){
+  if (typeof confetti !== "function" || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const colors = ["#EBF745","#F6FBC0","#FBFAF7","#FFFFFF","#2A2A2E"];
+  confetti({particleCount:110, spread:80, origin:{y:.35}, colors, disableForReducedMotion:true});
+  setTimeout(() => { confetti({particleCount:60, angle:60, spread:60, origin:{x:0,y:.6}, colors}); confetti({particleCount:60, angle:120, spread:60, origin:{x:1,y:.6}, colors}); }, 250);
+}
+
+let lastResult = "";
+const SHARE_HEAD = "내가 먹는 그릭요거트, 박슈가 TOP 63에 있을까?";
+const SHARE_BODY = "시중 플레인 그릭요거트 126개 뒷면을 전부 읽고 고른 63개야. 너도 이름 넣어봐 👇";
+function shareText(){ return `${lastResult || SHARE_HEAD}\n${SHARE_BODY}\n${SHARE_URL}`; }
+function copyText(txt, toast, msg){
+  const done = () => { toast.hidden=false; toast.textContent=msg||"링크를 복사했어요. 카톡 대화창에 붙여넣어 보내세요."; setTimeout(()=>toast.hidden=true, 3500); };
+  const fallback = () => { const ta=document.createElement("textarea"); ta.value=txt; ta.setAttribute("readonly",""); ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); let ok=false; try{ ok=document.execCommand("copy"); }catch(e){} ta.remove();
+    if(ok) done(); else { toast.hidden=false; toast.textContent=SHARE_URL; } };
+  try { navigator.clipboard.writeText(txt).then(done, fallback); } catch(e){ fallback(); }
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".share"); if(!b) return;
+  const toast = b.closest(".actions").querySelector(".toast");
+  const mobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+  if (mobile && navigator.share){
+    navigator.share({title:"내 그릭요거트 찾기", text:`${lastResult || SHARE_HEAD}\n${SHARE_BODY}`, url:SHARE_URL})
+      .catch(err => { if (err && err.name !== "AbortError") copyText(shareText(), toast); });
+  } else copyText(shareText(), toast);
+});
+document.getElementById("igTop").href = IG_URL;
+document.addEventListener("click", e => {
+  const a = e.target.closest("#buy, .share, #req, .ig, .notion, #again"); if (!a) return;
+  const where = a.closest(".page-actions") ? "page" : "result";
+  if (a.id==="buy") track("buy_click", {product: (document.getElementById("buyName")||{}).textContent || "", link_url: a.href});
+  else if (a.classList.contains("share")) track("share_click", {where});
+  else if (a.id==="req") track("request_click", {product: lastQuery.slice(0,95)});
+  else if (a.classList.contains("ig")) track("follow_click", {where});
+  else if (a.classList.contains("notion")) track("notion_click", {});
+  else if (a.id==="again") track("retest", {});
+}, true);
+</script>
+
+</body></html>
